@@ -21,7 +21,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
@@ -33,7 +32,6 @@ import {
   CaretSortIcon,
   DoubleArrowLeftIcon,
   DoubleArrowRightIcon,
-  EyeNoneIcon,
   MixerHorizontalIcon,
 } from '@radix-ui/react-icons';
 import { cn } from '@/lib/utils';
@@ -139,35 +137,21 @@ export function DataTableColumnHeader<TData, TValue>({
 
   return (
     <div className={cn('flex items-center space-x-2', className)}>
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant='ghost' size='sm' className='-ml-3 h-8 data-[state=open]:bg-accent'>
-            <span>{title}</span>
-            {column.getIsSorted() === 'desc' ? (
-              <ArrowDownIcon className='ml-2 size-4' />
-            ) : column.getIsSorted() === 'asc' ? (
-              <ArrowUpIcon className='ml-2 size-4' />
-            ) : (
-              <CaretSortIcon className='ml-2 size-4' />
-            )}
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align='start'>
-          <DropdownMenuItem onClick={() => column.toggleSorting(false)}>
-            <ArrowUpIcon className='mr-2 size-3.5 text-muted-foreground/70' />
-            Asc
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => column.toggleSorting(true)}>
-            <ArrowDownIcon className='mr-2 size-3.5 text-muted-foreground/70' />
-            Desc
-          </DropdownMenuItem>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => column.toggleVisibility(false)}>
-            <EyeNoneIcon className='mr-2 size-3.5 text-muted-foreground/70' />
-            Hide
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
+      <Button
+        variant='ghost'
+        size='sm'
+        className='-ml-3 h-8 data-[state=open]:bg-accent'
+        onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+      >
+        <span>{title}</span>
+        {column.getIsSorted() === 'desc' ? (
+          <ArrowDownIcon className='ml-2 size-4' />
+        ) : column.getIsSorted() === 'asc' ? (
+          <ArrowUpIcon className='ml-2 size-4' />
+        ) : (
+          <CaretSortIcon className='ml-2 size-4' />
+        )}
+      </Button>
     </div>
   );
 }

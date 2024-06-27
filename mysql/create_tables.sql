@@ -19,7 +19,7 @@ CREATE TABLE users (
 
 CREATE TABLE user_relationship (
 	id INT NOT NULL,
-    relationship TEXT NOT NULL,
+    user_relationship TEXT NOT NULL,
 	PRIMARY KEY (id),
     foreign key (id) references users(id)
 );

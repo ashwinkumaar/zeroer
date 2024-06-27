@@ -30,7 +30,7 @@ export function AddUserForm() {
     defaultValues: {
       id: '',
       name: '',
-      balance: '',
+      // balance: '',
       addr: '',
       city: '',
       phone: '',

@@ -1,37 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Button } from './components/ui/button'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const PANES = [
+    {
+      value: "aa",
+      component: <></>,
+    },
+    {
+      value: "bb",
+      component: <></>,
+    },
+  ];
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button
-          onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Tabs>
+        <TabsList>
+          {PANES.map(({ value: v }) => (
+            <TabsTrigger value={v} key={v} />
+          ))}
+        </TabsList>
+        {PANES.map(({ value: v, component }) => (
+          <TabsContent value={v} key={v}>
+            {component}
+          </TabsContent>
+        ))}
+      </Tabs>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

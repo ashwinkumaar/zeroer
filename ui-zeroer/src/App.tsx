@@ -39,12 +39,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <div className='h-screen w-screen bg-white pt-12'>
-        <Tabs value={routeState} className='mx-auto w-full max-w-screen-lg'>
+        <Tabs value={routeState} className='mx-auto flex w-full max-w-screen-lg flex-col gap-3'>
           <TabsList className='grid w-full grid-cols-2'>
             {SECTIONS.map((section) => (
               <TabsTrigger value={section.value} key={section.value}>
                 <a
-                  className='h-full w-full'
+                  className='size-full'
                   href={`/${section.value !== 'main' ? '?view=' + section.value : ''}`}
                 >
                   <span>{section.triggerText}</span>

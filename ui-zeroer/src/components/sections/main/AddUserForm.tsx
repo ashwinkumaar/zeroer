@@ -1,6 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -12,65 +11,55 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-// import { useMutation } from '@tanstack/react-query';
+import { type TFormKey, formSchema, type TAPIMutFunc, type TFormData } from './schema';
 
-// Get from API∏
-const formSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  addr: z.string(),
-  city: z.string(),
-  phone: z.string(),
-});
+type AddUserFormProps = {
+  postToBackend: TAPIMutFunc;
+  error: Error | null;
+  isPending: boolean;
+  isSuccess: boolean;
+};
 
-export function AddUserForm() {
-  // const { mutate: postToBackend, isError, isPending, isSuccess } = useMutation({
-  //   mutationFn: async (param: boolean) => {
-  //     return await fetch('API Endpoint,,,,', {
-  //       method: 'POST',
-  //       body: JSON.stringify({
-
-  //       })
-  //     })
-  //   }
-  // })
+export function AddUserForm({ postToBackend }: AddUserFormProps) {
   // 1. Define your form.
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<TFormData>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       id: '',
       name: '',
       // balance: '',
-      addr: '',
+      address: '',
       city: '',
       phone: '',
     },
   });
 
   // 2. Define a submit handler.
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: TFormData) {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
-    console.log(values);
-    // form.reset();
-    // postToBackend('string')
+    form.reset();
+    postToBackend(values);
   }
   //how to map zod object to form fields
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)} className='space-y-8'>
+      <form onSubmit={form.handleSubmit(onSubmit)} className='grid gap-6 p-6 pt-0'>
         {Object.keys(formSchema.shape).map((key) => (
           <FormField
+            key={key}
             control={form.control}
-            name={key as keyof typeof formSchema.shape}
+            name={key as TFormKey}
             render={({ field }) => (
-              <FormItem>
-                <FormLabel>{key.charAt(0).toUpperCase() + key.slice(1)}</FormLabel>
+              <FormItem className='grid gap-1'>
+                <div className='relative w-full'>
+                  <FormLabel>{key.charAt(0).toUpperCase() + key.slice(1)}</FormLabel>
+                  <FormMessage className='absolute right-0 top-0.5' />
+                </div>
                 <FormControl>
                   <Input {...field} />
                 </FormControl>
-                <FormMessage />
               </FormItem>
             )}
           />

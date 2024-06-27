@@ -1,0 +1,80 @@
+version: '1'
+name: zeroer
+
+volumes:
+  users_db_data: {}
+services:
+  db:
+      image: mysql:latest
+      container_name: db
+      environment:
+        MYSQL_DATABASE: zeroer
+        MYSQL_ROOT_USER: user
+        MYSQL_ROOT_PASSWORD: password
+        MYSQL_USER: zeroer
+        MYSQL_PASSWORD: secret
+      ports:
+        - "3306:3306"
+      volumes:
+        - users_db_data:/var/lib/mysql
+      networks:
+        - zeroer_docker
+
+  # backend:
+  #   depends_on:
+  #     - db
+  #     - rabbitmq
+  #   container_name: ml_backend
+  #   build:
+  #     context: ./backend
+  #     dockerfile: ./Dockerfile
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   image: ml_backend:latest
+  #   volumes:
+  #     - mlops_files:/services/mlops_files
+  #   #   - './:/var/www/html'
+  #   ports:
+  #     - 5050:5050
+  #     # - 80:80
+  #     # - 443:443
+  #   networks:
+  #     - zeroer_docker
+  
+  # frontend:
+  #   container_name: ml_frontend
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: ./Dockerfile
+  #   image: ml_frontend:latest
+  #   ports:
+  #     - 8080:80
+  #   networks:
+  #     - zeroer_docker
+  
+  rabbitmq:
+    container_name: zeroer_rabbitmq
+    image: rabbitmq:3.11.10-management
+    environment:
+      RABBITMQ_USER: user
+      RABBITMQ_PASSWORD: password
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json
+      # - "rabbitmq_data:/data"
+    networks:
+      - zeroer_docker
+
+networks:
+  zeroer_docker:
+    name: zeroer_docker
+
+  # mlops_files:
+  #   driver: local
+  #   driver_opts:
+  #     type: 'none'
+  #     o: 'bind'
+  #     device: './services/mlops_files'

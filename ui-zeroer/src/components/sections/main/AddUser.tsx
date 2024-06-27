@@ -12,6 +12,7 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
+// import { useMutation } from '@tanstack/react-query';
 
 // Get from API∏
 const formSchema = z.object({
@@ -23,6 +24,16 @@ const formSchema = z.object({
 });
 
 export function AddUserForm() {
+  // const { mutate: postToBackend, isError, isPending, isSuccess } = useMutation({
+  //   mutationFn: async (param: boolean) => {
+  //     return await fetch('API Endpoint,,,,', {
+  //       method: 'POST',
+  //       body: JSON.stringify({
+
+  //       })
+  //     })
+  //   }
+  // })
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -41,6 +52,8 @@ export function AddUserForm() {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     console.log(values);
+    // form.reset();
+    // postToBackend('string')
   }
   //how to map zod object to form fields
 

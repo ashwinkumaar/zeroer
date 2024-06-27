@@ -1,32 +1,10 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./components/ui/tabs";
-
 function App() {
-  const PANES = [
-    {
-      value: "aa",
-      component: <></>,
-    },
-    {
-      value: "bb",
-      component: <></>,
-    },
-  ];
-
   return (
-    <>
-      <Tabs>
-        <TabsList>
-          {PANES.map(({ value: v }) => (
-            <TabsTrigger value={v} key={v} />
-          ))}
-        </TabsList>
-        {PANES.map(({ value: v, component }) => (
-          <TabsContent value={v} key={v}>
-            {component}
-          </TabsContent>
-        ))}
-      </Tabs>
-    </>
+    <div className="w-screen h-screen bg-white">
+      <p className="text-7xl font-black text-black">
+        Hello World
+      </p>
+    </div>
   );
 }
 

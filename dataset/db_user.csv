@@ -1,0 +1,865 @@
+id,user_name,user_address,user_city,user_phone,process_status,date_created
+1,apple pan  the,0801 w. pico blvd,est l,310-475-3585,processed,2021-07-01 00:34:13
+2,asahi ramen,027 sawtelle blvd,est l,310-479-2231,processed,2015-09-29 04:22:19
+3,baja fresh,345 kimber dr,estlake villag,805-498-4049,processed,2018-02-21 07:57:17
+4,belvedere  the,882 little santa monica blvd,everly hill,310-788-2306,processed,2017-01-18 02:47:20
+5,benitas frites,433 third st. promenad,anta monic,310-458-2889,processed,2020-02-25 00:44:06
+6,bernards,15 s. olive st,os angele,213-612-1580,processed,2015-12-29 16:39:46
+7,bistro 45,5 s. mentor ave,sade,818-795-2478,processed,2022-05-31 07:11:34
+8,brents deli,9565 parthenia ave,rthrid,818-886-5679,processed,2022-02-04 06:19:18
+9,brighton coffee shop,600 brighton wa,everly hill,310-276-7732,processed,2021-12-23 09:35:54
+10,bristol farms market cafe,570 rosecrans ave. s,sade,310-643-5229,processed,2021-02-05 17:33:52
+11,brunos,838 centinela ave,ar vist,310-397-5703,processed,2015-07-10 19:41:37
+12,cafe 50s,38 lincoln blvd,ni,310-399-1955,processed,2018-07-02 19:19:41
+13,cafe blanc,777 little santa monica blvd,everly hill,310-888-0108,processed,2019-12-13 00:08:08
+14,cassells,266 w. sixth st,,213-480-8668,processed,2017-02-08 23:04:07
+15,chez melange,716 pc,edondo beac,310-540-1222,processed,2015-04-17 13:53:04
+16,iaghile,020 n. san vicente blvd,. hollywoo,310-854-1111,processed,2021-05-17 01:44:55
+17,don antonios,136 westwood blvd,stwo,310-209-1422,processed,2015-12-09 04:11:33
+18,dukes,909 sunset blvd,. hollywoo,310-652-3100,processed,2017-09-02 13:24:44
+19,falafel king,059 broxton ave,stwo,310-208-4444,processed,2024-02-16 07:41:20
+20,feast from the east,949 westwood blvd,est l,310-475-0400,processed,2022-01-23 21:52:03
+21,gumbo pot  the,333 w. third st,,213-933-0358,processed,2019-03-09 02:12:53
+22,hollywood hills coffee shop,145 franklin ave,llywo,213-467-7678,processed,2021-06-11 19:09:11
+23,indo cafe,0428 1/2 national blvd,,310-815-1290,processed,2018-07-21 14:32:01
+24,jans family restaurant,424 beverly blvd,,213-651-2866,processed,2017-10-19 07:32:08
+25,iraff,02 santa monica blv,anta monic,310-917-6671,processed,2024-02-16 04:23:55
+26,jody maronis sausage kingdom,011 ocean front wal,ni,310-306-1995,processed,2015-06-08 09:43:50
+27,joes,023 abbot kinney blvd,ni,310-399-5811,processed,2018-05-18 18:49:15
+28,john ogroats,0516 w. pico blvd,est l,310-204-0692,processed,2015-10-03 16:14:17
+29,johnnies pastrami,017 s. sepulveda blvd,ulver cit,310-397-6654,processed,2022-03-01 08:09:21
+30,johnny rebs southern smokehouse,663 long beach blvd,ong beac,310-423-7327,processed,2016-03-28 23:02:42
+31,johnny rockets (la),507 melrose ave,,213-651-3361,processed,2020-02-14 04:36:02
+32,killer shrimp,000 colfax ave,tudio cit,818-508-1570,processed,2016-06-08 13:18:14
+33,kokomo cafe,333 w. third st,,213-933-0773,processed,2019-11-29 19:26:23
+34,koo koo roo,393 w. beverly blvd,,213-655-9045,processed,2024-01-27 21:06:46
+35,la cachette,0506 little santa monica blvd,entury cit,310-470-4992,processed,2021-07-27 11:25:25
+36,la salsa (la),2800 pc,li,310-456-6299,processed,2023-09-21 18:21:15
+37,la serenata de garibaldi,842 e. firs,t. boyle hts,213-265-2887,processed,2015-05-18 16:56:24
+38,langers,04 s. alvarado st,,213-483-8050,processed,2018-10-08 03:48:27
+39,local nochol,0869 thousand oaks blvd,estlake villag,818-706-7706,processed,2015-06-02 20:03:32
+40,main course  the,0509 w. pico blvd,ancho par,310-475-7564,processed,2016-07-29 04:30:34
+41,manis bakery & espresso bar,19 s. fairfax ave,,213-938-8800,processed,2023-05-19 20:41:24
+42,marthas,2nd street grill 25 22n,t. hermosa beac,310-376-7786,processed,2017-09-24 16:50:06
+43,maxwells cafe,3329 washington blvd,arina del re,310-306-7829,processed,2020-11-15 10:08:42
+44,michaels (los angeles),147 third st,anta monic,310-451-0843,processed,2022-11-12 06:26:45
+45,ishim,474 w. third st,,213-782-0181,processed,2015-09-09 22:22:08
+46,mo better meatty meat,261 melrose ave,,213-935-5280,processed,2017-08-15 12:35:06
+47,mulberry st.,7040 ventura blvd,ci,818-906-8881,processed,2016-10-17 21:01:21
+48,ocean park cafe,117 ocean park blvd,anta monic,310-452-5728,processed,2020-07-03 21:45:48
+49,ocean star,45 n. atlantic blvd,onterey par,818-308-2128,processed,2022-08-28 05:00:26
+50,original pantry bakery,75 s. figueroa st. downtow,,213-627-6879,processed,2016-11-15 07:23:34
+51,parkway grill,10 s. arroyo pkwy,sade,818-795-1001,processed,2021-07-31 09:27:07
+52,pho hoa,42 broadwa,inato,213-626-5530,processed,2020-11-08 11:59:09
+53,pinks famous chili dogs,09 n. la brea ave,,213-931-4223,processed,2015-05-08 15:21:51
+54,poquito mas,635 w. olive ave,rba,818-563-2252,processed,2017-12-24 02:04:49
+55,-2,23 e. third st,os angele,213-687-7178,processed,2023-09-28 18:39:16
+56,raes,901 pico blvd,anta monic,310-828-7937,processed,2021-08-30 11:59:56
+57,rubins red hots,5322 ventura blvd,ci,818-905-6515,processed,2020-08-15 19:52:49
+58,rubys (la),5 s. fair oaks ave,sade,818-796-7829,processed,2016-05-17 17:34:19
+59,russells burgers,198 pc,eal beac,310-596-9556,processed,2019-01-15 04:18:50
+60,ruths chris steak house (los angeles),24 s. beverly dr,everly hill,310-859-8744,processed,2022-09-30 10:05:11
+61,hir,505 mission st. s,sade,818-799-4774,processed,2022-10-31 23:34:20
+62,sushi nozawa,1288 ventura blvd,tudio cit,818-508-7017,processed,2022-03-18 06:08:12
+63,sweet lady jane,360 melrose ave,,213-653-7145,processed,2016-10-31 23:35:24
+64,aik,1677 san vicente blvd,entwo,310-207-7782,processed,2016-12-19 04:53:29
+65,tommys,575 beverly blvd,,213-389-9060,processed,2017-12-08 14:21:12
+66,uncle bills pancake house,305 highland ave,anhattan beac,310-545-5177,processed,2018-10-02 13:55:36
+67,water grill,44 s. grand ave,os angele,213-891-0900,processed,2017-07-03 08:15:14
+68,zankou chicken,415 e. colorado st,enda,818-244-1937,processed,2024-03-16 05:49:13
+69,afghan kebab house,64 ninth ave,ew york cit,212-307-1612,processed,2018-07-03 14:38:28
+70,rcadi,1 e. 62nd st,ew york cit,212-223-2900,processed,2015-12-27 02:21:35
+71,bennys burritos,3 ave. ,ew york cit,212-254-2054,processed,2023-02-08 14:48:22
+72,cafe con leche,24 amsterdam ave,ew york cit,212-595-7000,processed,2015-12-15 17:27:53
+73,corner bistro,31 w. fourth st,ew york cit,212-242-9502,processed,2017-11-07 05:32:44
+74,cucina della fontana,68 bleecker st,ew york cit,212-242-0636,processed,2016-01-04 06:33:02
+75,cucina di pesce,7 e. fourth st,ew york cit,212-260-6800,processed,2020-06-25 13:30:43
+76,arba,4 w. 56th st,ew york cit,212-432-7227,processed,2016-08-07 05:32:42
+77,ejs luncheonette,32 sixth ave,ew york cit,212-473-5555,processed,2020-12-15 10:52:25
+78,edison cafe,28 w. 47th st,ew york cit,212-840-5000,processed,2020-04-23 08:35:52
+79,elias corner,4-02 31st st,ee,718-932-1510,processed,2017-11-28 17:39:37
+80,good enough to eat,83 amsterdam ave,ew york cit,212-496-0163,processed,2018-05-22 20:41:52
+81,grays papaya,090 broadwa,ew york cit,212-799-0243,processed,2021-04-03 17:58:43
+82,il mulino,6 w. third st,ew york cit,212-673-3783,processed,2018-12-11 22:55:33
+83,jackson diner,7-03 74th st,ee,718-672-1232,processed,2017-08-01 16:50:21
+84,joes shanghai, pell st,ee,718-539-3838,processed,2021-01-11 09:55:12
+85,johns pizzeria,8 w. 65th st,ew york cit,212-721-7001,processed,2015-07-24 20:46:45
+86,kelley & ping,27 greene st,ew york cit,212-228-1212,processed,2023-09-04 08:08:26
+87,ie,17 second ave,ew york cit,212-674-4040,processed,2020-03-18 07:51:39
+88,kuruma zushi,nd fl,ew york cit,212-317-2802,processed,2017-08-14 21:02:28
+89,la caridad,199 broadwa,ew york cit,212-874-2780,processed,2021-08-06 12:06:49
+90,la grenouille, e. 52nd st,ew york cit,212-752-1495,processed,2022-07-30 01:49:37
+91,lemongrass grill,1a seventh ave,ookl,718-399-7100,processed,2021-06-22 11:16:51
+92,lombardis,2 spring st,ew york cit,212-941-7994,processed,2015-04-09 10:21:42
+93,marnies noodle shop,66 hudson st,ew york cit,212-741-3214,processed,2017-03-12 09:57:15
+94,enchanko-te,9 w. 55th st,ew york cit,212-247-1585,processed,2018-04-19 08:15:16
+95,mitali east-west,96 bleecker st,ew york cit,212-989-1367,processed,2023-04-17 12:09:40
+96,monsoon (ny),35 amsterdam ave,ew york cit,212-580-8686,processed,2022-10-09 08:49:26
+97,oustach,05 atlantic ave,ookl,718-852-5555,processed,2016-01-28 22:06:06
+98,ob,05 hudson st,ew york cit,212-219-0500,processed,2021-12-06 07:33:09
+99,one if by land  tibs,7 barrow st,ew york cit,212-228-0822,processed,2019-11-14 11:25:18
+100,oyster bar,ower leve,ew york cit,212-490-6650,processed,2016-05-25 23:38:24
+101,al,37 second ave,ew york cit,212-687-2953,processed,2016-08-26 10:24:08
+102,palm too,40 second ave,ew york cit,212-697-5198,processed,2019-10-08 14:50:43
+103,patsys pizza,9 old fulton st,ookl,718-858-4300,processed,2016-05-19 01:49:40
+104,peter luger steak house,78 broadwa,ookl,718-387-7400,processed,2016-06-14 00:21:21
+105,rose of india,08 e. sixth st,ew york cit,212-533-5011,processed,2019-07-29 16:07:58
+106,sams noodle shop,11 third ave,ew york cit,212-213-2288,processed,2019-03-06 05:02:33
+107,sarabeths,295 madison ave,ew york cit,212-410-7335,processed,2019-04-24 02:58:33
+108,sparks steak house,10 e. 46th st,ew york cit,212-687-4855,processed,2020-07-16 07:36:57
+109,stick to your ribs,-16 51st ave,ee,718-937-3030,processed,2021-06-07 21:45:17
+110,ushisa,8 e. 51st st,ew york cit,212-755-1780,processed,2021-02-10 09:52:04
+111,sylvias,28 lenox ave,ew york cit,212-996-0660,processed,2015-12-01 14:18:31
+112,szechuan hunan cottage,588 york ave,ew york cit,212-535-5223,processed,2021-12-06 09:22:15
+113,szechuan kitchen,460 first ave,ew york cit,212-249-4615,processed,2021-01-10 23:59:22
+114,teresas,0 montague st,ee,718-520-2910,processed,2022-01-09 08:17:18
+115,thai house cafe,51 hudson st,ew york cit,212-334-1085,processed,2018-07-21 20:19:12
+116,thailand restaurant,06 bayard st,ew york cit,212-349-3132,processed,2023-02-17 22:30:30
+117,eselk,44 second ave,ew york cit,212-228-9682,processed,2019-01-20 21:52:01
+118,westside cottage,89 ninth ave,ew york cit,212-245-0800,processed,2020-10-29 03:44:33
+119,windows on the world,07th fl,ew york cit,212-524-7000,processed,2024-01-20 15:09:55
+120,wollenskys grill,05 e. 49th st,ew york cit,212-753-0444,processed,2019-09-04 00:59:41
+121,am,22 e. 17th st,ew york cit,212-475-0969,processed,2021-02-27 00:04:36
+122,arel,53 second ave,ew york cit,212-644-6740,processed,2019-06-11 20:29:22
+123,andres french restaurant,01 s. 6th st,as vega,702-385-5016,processed,2015-07-11 05:05:07
+124,buccaneer bay club,300 las vegas blvd. s,as vega,702-894-7350,processed,2023-12-27 14:25:06
+125,buzios in the rio,700 w. flamingo rd,as vega,702-252-7697,processed,2022-07-27 03:24:21
+126,emerils new orleans fish house,799 las vegas blvd. s,as vega,702-891-7374,processed,2019-05-09 23:45:33
+127,fiore rotisserie & grille,700 w. flamingo rd,as vega,702-252-7702,processed,2015-10-20 03:46:26
+128,hugos cellar,02 e. fremont st,as vega,702-385-4011,processed,2017-08-02 06:31:27
+129,madame chings,300 las vegas blvd. s,as vega,702-894-7111,processed,2016-01-16 12:47:58
+130,mayflower cuisinier,750 w. sahara ave,as vega,702-870-8432,processed,2018-08-27 20:27:58
+131,michaels (las vegas),595 las vegas blvd. s,as vega,702-737-7111,processed,2021-01-19 05:44:23
+132,monte carlo,145 las vegas blvd. s,as vega,702-733-4524,processed,2016-10-13 14:12:42
+133,oongat,400 las vegas blvd. s,as vega,702-791-7352,processed,2016-10-23 20:51:39
+134,mortons of chicago (las vegas),200 las vegas blvd. s,as vega,702-893-0703,processed,2015-06-19 19:09:58
+135,nicky blairs,925 paradise rd,as vega,702-792-9900,processed,2021-04-28 13:59:35
+136,pieros restaurant,55 convention center dr,as vega,702-369-2305,processed,2022-07-08 22:00:49
+137,spago (las vegas),500 las vegas blvd. s,as vega,702-369-6300,processed,2023-07-03 06:11:32
+138,steakhouse  the,28 e. fremont st,as vega,702-382-1600,processed,2020-09-25 13:56:37
+139,stefanos,29 fremont st,as vega,702-385-7111,processed,2018-02-26 19:30:48
+140,sterling brunch,645 las vegas blvd. s,as vega,702-739-4651,processed,2016-10-23 20:05:20
+141,tre visi,799 las vegas blvd. s,as vega,702-891-7331,processed,2017-02-08 01:35:44
+142,103 west,03 w. paces ferry rd,lan,404-233-5993,processed,2019-02-24 17:03:41
+143,alons at the terrace,59 peachtree st,lan,404-724-0444,processed,2017-07-17 12:48:59
+144,bakers cajun cafe,134 euclid ave,lan,404-223-5039,processed,2019-03-24 03:00:43
+145,barbecue kitchen,437 virginia ave,lan,404-766-9906,processed,2023-03-10 14:07:00
+146,bistro  the,6 e. andrews dr. n,lan,404-231-5733,processed,2019-06-18 00:03:50
+147,bobby & junes kountry kitchen,75 14th st,lan,404-876-3872,processed,2018-04-08 00:38:15
+148,bradshaws restaurant,911 s. pharr cour,lan,404-261-7015,processed,2021-10-25 17:11:23
+149,brookhaven cafe,274 peachtree rd,lan,404-231-5907,processed,2019-01-30 15:57:56
+150,cafe sunflower,975 roswell rd,lan,404-256-1675,processed,2022-04-30 01:45:50
+151,ano,199 paces ferry rd,lan,770-432-2663,processed,2024-04-11 17:16:57
+152,careys,021 cobb pkwy. s,riet,770-422-8042,processed,2018-11-19 01:28:10
+153,careys corner,215 powers ferry rd,riet,770-933-0909,processed,2017-12-12 17:21:46
+154,hop,0 w. paces ferry rd,lan,404-262-2675,processed,2018-11-04 06:54:21
+155,hopsti,279 roswell rd,lan,404-255-4868,processed,2016-08-16 14:09:37
+156,deacon burtons soulfood restaurant,029 edgewood ave. s,lan,404-523-1929,processed,2020-08-29 10:58:40
+157,at,00 ponce de leon ave,lan,404-888-9149,processed,2022-05-12 06:59:01
+158,flying biscuit  the,655 mclendon ave,lan,404-687-8888,processed,2020-08-14 06:58:08
+159,rijolero,031 peachtree st. n,lan,404-892-8226,processed,2018-10-27 00:00:32
+160,greenwoods,087 green st,swe,770-992-5383,processed,2015-01-18 03:39:50
+161,harolds barbecue,71 mcdonough blvd,lan,404-627-9268,processed,2015-06-29 21:02:29
+162,havana sandwich shop,905 buford hwy,lan,404-636-4094,processed,2016-04-22 12:18:24
+163,house of chan,469 cobb pkwy,yr,770-955-9444,processed,2022-05-01 06:42:35
+164,indian delights,675 satellite blvd,lu,100-813-8212,processed,2023-08-02 11:51:18
+165,java jive,90 ponce de leon ave,lan,404-876-6161,processed,2020-12-09 15:46:36
+166,johnny rockets (at),970 cobb pkwy,lan,770-955-6068,processed,2020-06-08 19:42:12
+167,kalos coffee house,248 clairmont rd,cat,404-325-3733,processed,2016-08-08 21:03:50
+168,la fonda latina,427 roswell rd,lan,404-303-8201,processed,2015-09-29 10:49:32
+169,lettuce souprise you (at),525 mall blvd,lu,770-418-9969,processed,2022-09-29 00:11:00
+170,ajesti,031 ponce de leon ave,lan,404-875-0276,processed,2017-02-25 06:47:49
+171,mortons of chicago (atlanta),03 peachtree st. n,lan,404-577-4366,processed,2020-04-11 15:23:26
+172,my thai,248 clairmont rd,lan,404-636-4280,processed,2019-10-26 00:30:29
+173,av,060 peachtree rd,lan,404-240-1984,processed,2022-03-22 11:28:22
+174,nuevo laredo cantina,495 chattahoochee ave. n,lan,404-352-9009,processed,2016-06-09 04:59:35
+175,original pancake house (at),330 peachtree rd,lan,404-237-4116,processed,2019-04-27 13:55:10
+176,palm  the (atlanta),391 peachtree rd. n,lan,404-814-1955,processed,2019-09-11 10:39:35
+177,rainbow restaurant,118 n. decatur rd,cat,404-633-3538,processed,2019-01-21 06:35:11
+178,ivier,19 e. paces ferry rd,lan,404-262-7112,processed,2016-02-29 05:18:31
+179,silver skillet  the,00 14th st. n,lan,404-874-1388,processed,2018-09-05 09:11:35
+180,ot,330 piedmont rd,lan,404-233-2005,processed,2017-06-05 10:11:55
+181,thelmas kitchen,64 marietta st. n,lan,404-688-5855,processed,2021-04-28 10:30:19
+182,ortilla,74 ponce de leon ave. n,lan,404-892-0193,processed,2024-01-23 13:21:49
+183,van goghs restaurant & bar,0 w. crossville rd,swe,770-993-1156,processed,2017-09-29 13:26:39
+184,eggielan,20 sandy springs circl,lan,404-231-3111,processed,2022-10-16 17:19:28
+185,white house restaurant,172 peachtree rd. n,lan,404-237-7601,processed,2021-05-23 07:41:19
+186,ab-e-le,837 old national hwy,ollege par,404-768-2705,processed,2019-09-06 14:24:25
+187,bills place,315 clement st,an francisc,415-221-5262,processed,2022-05-01 17:00:43
+188,cafe flore,298 market st,an francisc,415-621-8579,processed,2015-02-01 22:04:15
+189,caffe greco,23 columbus ave,an francisc,415-397-6261,processed,2017-07-06 01:13:32
+190,campo santo,40 columbus ave,an francisc,415-433-9623,processed,2017-03-23 03:22:53
+191,cha cha chas,805 haight st,an francisc,415-386-5758,processed,2016-04-07 22:06:24
+192,doidges,217 union st,an francisc,415-921-2149,processed,2018-06-25 09:38:44
+193,dotties true blue cafe,22 jones st,an francisc,415-885-2767,processed,2024-04-17 09:33:02
+194,dusit thai,221 mission st,an francisc,415-826-4639,processed,2023-12-18 12:56:52
+195,bis,283 ninth ave,an francisc,415-566-1770,processed,2015-09-20 13:57:50
+196,emerald garden restaurant,550 california st,an francisc,415-673-1155,processed,2018-07-12 07:51:55
+197,erics chinese restaurant,500 church st,an francisc,415-282-0919,processed,2021-01-21 22:16:29
+198,hamburger marys,582 folsom st,an francisc,415-626-1985,processed,2018-06-06 00:13:11
+199,kellys on trinity,33 bush st,an francisc,415-362-4454,processed,2023-07-12 09:21:12
+200,la cumbre,15 valencia st,an francisc,415-863-8205,processed,2015-12-25 23:44:59
+201,la mediterranee,88 noe st,an francisc,415-431-7210,processed,2023-05-01 08:25:49
+202,la taqueria,889 mission st,an francisc,415-285-7117,processed,2022-04-29 16:54:37
+203,marios bohemian cigar store cafe,209 polk st,an francisc,415-776-8226,processed,2018-03-04 11:15:03
+204,marnee thai,225 irving st,an francisc,415-665-9500,processed,2020-08-12 04:07:42
+205,mels drive-in,355 geary st,an francisc,415-387-2244,processed,2021-08-05 06:17:03
+206,mos burgers,322 grant st,an francisc,415-788-3779,processed,2017-04-08 05:43:13
+207,phnom penh cambodian restaurant,31 larkin st,an francisc,415-775-5979,processed,2022-10-13 10:25:35
+208,roosevelt tamale parlor,817 24th st,an francisc,415-550-9213,processed,2017-01-05 05:38:41
+209,sallys cafe & bakery,00 de haro st,an francisc,415-626-6006,processed,2024-04-08 22:11:37
+210,san francisco bbq,328 18th st,an francisc,415-431-8956,processed,2016-03-13 19:55:21
+211,slanted door,84 valencia st,an francisc,415-861-8032,processed,2016-03-24 20:44:20
+212,swan oyster depot,517 polk st,an francisc,415-673-1101,processed,2019-11-19 06:58:21
+213,thep phanom,00 waller st,an francisc,415-431-2526,processed,2023-10-11 10:21:43
+214,ti couz,108 16th st,an francisc,415-252-7373,processed,2020-04-07 06:12:17
+215,trio cafe,870 fillmore st,an francisc,415-563-2248,processed,2023-09-26 22:21:43
+216,tu lan, sixth st,an francisc,415-626-0927,processed,2015-08-04 13:34:24
+217,vicolo pizzeria,01 ivy st,an francisc,415-863-2382,processed,2020-08-10 19:26:53
+218,wa-ha-ka oaxaca mexican grill,141 polk st,an francisc,415-775-1055,processed,2019-02-21 21:49:54
+219,arnie mortons of chicago,35 s. la cienega blvd,os angele,310-246-1501,processed,2016-04-26 09:50:21
+220,arts deli,2224 ventura blvd,tudio cit,818-762-1221,processed,2022-08-20 20:50:37
+221,bel-air hotel,01 stone canyon rd,el ai,310-472-1211,processed,2022-09-16 04:27:26
+222,cafe bizou,4016 ventura blvd,herman oak,818-788-3536,processed,2016-12-06 17:25:18
+223,ampanil,24 s. la brea ave,os angele,213-938-1447,processed,2019-01-01 08:27:42
+224,chinois on main,709 main st,anta monic,310-392-9025,processed,2015-04-28 05:30:31
+225,itru,703 melrose ave,os angele,213-857-0034,processed,2018-03-13 15:11:38
+226,fenix at the argyle,358 sunset blvd,. hollywoo,213-848-6677,processed,2015-10-09 07:57:55
+227,ranit,3725 w. malibu rd,li,310-456-0488,processed,2023-12-06 14:15:10
+228,grill  the,560 dayton wa,everly hill,310-276-0615,processed,2023-06-20 05:58:27
+229,ats,972 hillhurst ave,os feli,213-665-1891,processed,2023-12-27 10:39:28
+230,lorangerie,03 n. la cienega blvd,. hollywoo,310-652-9770,processed,2016-08-14 20:33:57
+231,le chardonnay (los angeles),284 melrose ave,os angele,213-655-8880,processed,2019-04-14 14:43:51
+232,locanda veneta,638 w. third st,os angele,310-274-1893,processed,2021-04-30 17:14:15
+233,atsuhis,29 n. la cienega blvd,everly hill,310-659-9639,processed,2024-02-09 10:57:42
+234,palm  the (los angeles),001 santa monica blvd,. hollywoo,310-550-8811,processed,2017-02-27 09:58:57
+235,atin,955 melrose ave,os angele,213-467-1108,processed,2016-04-16 14:39:57
+236,philippe the original,001 n. alameda st,inato,213-628-3781,processed,2023-05-18 04:55:46
+237,pinot bistro,2969 ventura blvd,tudio cit,818-990-0500,processed,2016-02-21 14:51:01
+238,rex il ristorante,17 s. olive st,os angele,213-627-2300,processed,2017-09-12 22:20:52
+239,spago (los angeles),795 sunset blvd,. hollywoo,310-652-4025,processed,2019-08-09 16:04:27
+240,alentin,115 pico blvd,anta monic,310-829-4313,processed,2023-12-24 23:19:17
+241,yujean kangs,7 n. raymond ave,sade,818-585-0855,processed,2019-05-08 18:48:09
+242,21 club,1 w. 52nd st,ew york cit,212-582-7200,processed,2022-09-15 15:04:47
+243,quavi,3 w. 54th st,ew york cit,212-307-7311,processed,2017-07-20 15:59:03
+244,ureol,4 e. 61st st,ew york cit,212-319-1660,processed,2019-08-10 14:00:04
+245,cafe lalo,01 w. 83rd st,ew york cit,212-496-6031,processed,2019-08-23 17:52:26
+246,cafe des artistes, w. 67th st,ew york cit,212-877-3500,processed,2023-08-12 19:41:45
+247,carmines,450 broadwa,ew york cit,212-362-2200,processed,2018-03-25 19:28:28
+248,carnegie deli,54 seventh ave,ew york cit,212-757-2245,processed,2015-10-19 19:58:48
+249,hanterell, harrison st,ew york cit,212-966-6960,processed,2022-12-11 16:09:52
+250,anie,0 e. 76th st,ew york cit,212-288-0033,processed,2021-04-17 13:31:35
+251,awa,10 e. 58th st,ew york cit,212-355-7555,processed,2020-05-17 00:48:04
+252,elidi,43 e. 58th st,ew york cit,212-758-1479,processed,2021-09-02 13:48:45
+253,four seasons,9 e. 52nd st,ew york cit,212-754-9494,processed,2022-02-22 10:34:48
+254,gotham bar & grill,2 e. 12th st,ew york cit,212-620-4020,processed,2023-08-09 19:28:24
+255,gramercy tavern,2 e. 20th st,ew york cit,212-477-0777,processed,2019-08-31 08:17:19
+256,island spice,02 w. 44th st,ew york cit,212-765-1737,processed,2021-11-15 16:24:45
+257,jo jo,60 e. 64th st,ew york cit,212-223-5656,processed,2017-09-28 03:07:09
+258,la caravelle,3 w. 55th st,ew york cit,212-586-4252,processed,2019-10-04 21:48:36
+259,la cote basque,0 w. 55th st,ew york cit,212-688-6525,processed,2023-12-06 03:47:52
+260,le bernardin,55 w. 51st st,ew york cit,212-489-1515,processed,2023-08-22 22:19:23
+261,les celebrites,55 w. 58th st,ew york cit,212-484-5113,processed,2019-06-12 02:31:22
+262,lespinasse (new york city), e. 55th st,ew york cit,212-339-6719,processed,2020-02-08 14:59:35
+263,utec,49 e. 50th st,ew york cit,212-752-2225,processed,2024-02-01 10:40:41
+264,manhattan ocean club,7 w. 58th st,ew york cit,212-371-7777,processed,2016-06-04 12:48:16
+265,arc,05 e. 58th st,ew york cit,212-754-6272,processed,2017-05-31 23:51:58
+266,mesa grill,02 fifth ave,ew york cit,212-807-7400,processed,2021-11-19 06:53:47
+267,mi cocina,7 jane st,ew york cit,212-627-8273,processed,2015-11-10 05:21:10
+268,ontrache,39 w. broadwa,ew york cit,212-219-2777,processed,2020-05-08 09:13:12
+269,cean,5 e. 54th st,ew york cit,212-759-5941,processed,2016-01-02 09:22:43
+270,park avenue cafe (new york city),00 e. 63rd st,ew york cit,212-644-1900,processed,2017-03-12 22:58:24
+271,etrossia,82 w. 58th st,ew york cit,212-245-2214,processed,2020-04-03 02:05:44
+272,icholin,5 w. 64th st,ew york cit,212-724-8585,processed,2023-03-01 17:25:47
+273,isce,5 ave. ,ew york cit,212-260-6660,processed,2016-04-06 14:07:04
+274,rainbow room,0 rockefeller plaz,ew york cit,212-632-5000,processed,2015-09-16 17:22:01
+275,river cafe, water st,ookl,718-522-5200,processed,2022-03-28 14:17:44
+276,san domenico,40 central park s,ew york cit,212-265-5959,processed,2019-05-21 05:46:11
+277,second avenue deli,56 second ave,ew york cit,212-677-0606,processed,2019-04-11 11:49:50
+278,eryn,1 e. 53rd st,ew york cit,212-980-9393,processed,2020-02-19 03:32:38
+279,shun lee palace,55 e. 55th st,ew york cit,212-371-8844,processed,2017-08-12 04:48:03
+280,sign of the dove,110 third ave,ew york cit,212-861-8080,processed,2022-03-23 19:04:07
+281,smith & wollensky,97 third ave,ew york cit,212-753-1530,processed,2023-02-27 02:03:41
+282,tavern on the green,entral park wes,ew york cit,212-873-3200,processed,2022-09-15 19:05:12
+283,uncle nicks,47 ninth ave,ew york cit,212-245-7992,processed,2019-04-26 07:16:50
+284,union square cafe,1 e. 16th st,ew york cit,212-243-4020,processed,2023-03-06 22:12:25
+285,virgils real bbq,52 w. 44th st,ew york cit,212-921-9494,processed,2016-01-13 13:32:19
+286,chins,200 las vegas blvd. s,as vega,702-733-8899,processed,2015-03-08 05:14:22
+287,coyote cafe (las vegas),799 las vegas blvd. s,as vega,702-891-7349,processed,2015-09-26 17:47:03
+288,le montrachet bistro,000 paradise rd,as vega,702-732-5651,processed,2015-08-24 00:01:26
+289,palace court,570 las vegas blvd. s,as vega,702-731-7110,processed,2021-01-29 17:11:45
+290,second street grill,00 e. fremont st,as vega,702-385-6277,processed,2022-08-18 05:52:13
+291,steak house  the,880 las vegas blvd. s,as vega,702-734-0410,processed,2019-12-21 01:24:38
+292,tillerman  the,245 e. flamingo rd,as vega,702-731-4036,processed,2022-08-01 16:09:04
+293,bruzz,355 peachtree rd. n,lan,404-261-8186,processed,2016-11-15 03:18:37
+294,acchanali,125 piedmont rd,lan,404-365-0410,processed,2019-02-06 05:46:47
+295,bones restaurant,130 piedmont rd. n,lan,404-237-2663,processed,2023-04-13 17:02:12
+296,brasserie le coze,393 peachtree rd,lan,404-266-1440,processed,2017-09-11 08:27:42
+297,buckhead diner,073 piedmont rd,lan,404-262-3336,processed,2022-08-07 08:48:48
+298,ciboulette restaurant,529 piedmont ave,lan,404-874-7600,processed,2020-03-07 10:44:15
+299,electable, margaret mitchell sq,lan,404-681-2909,processed,2017-06-27 09:09:33
+300,georgia grille,290 peachtree rd,lan,404-352-3517,processed,2019-01-17 03:18:34
+301,hedgerose heights inn  the,90 e. paces ferry rd. n,lan,404-233-7673,processed,2023-05-05 14:12:47
+302,heera of india,95 piedmont ave,lan,404-876-4408,processed,2017-03-23 19:36:32
+303,indigo coastal grill,397 n. highland ave,lan,404-876-0676,processed,2024-03-31 05:19:47
+304,la grotta,637 peachtree rd. n,lan,404-231-1368,processed,2023-11-05 18:05:53
+305,mary macs tea room,24 ponce de leon ave,lan,404-876-1800,processed,2020-10-06 18:53:12
+306,nikolais roof,55 courtland st,lan,404-221-6362,processed,2019-10-20 22:38:15
+307,panos & pauls,232 w. paces ferry rd,lan,404-261-3662,processed,2022-10-21 04:29:02
+308,ritz-carlton cafe (buckhead),434 peachtree rd. n,lan,404-237-2700,processed,2018-03-07 18:45:30
+309,ritz-carlton dining room (buckhead),434 peachtree rd. n,lan,404-237-2700,processed,2023-08-17 21:34:34
+310,ritz-carlton restaurant,81 peachtree st,lan,404-659-0400,processed,2016-08-30 14:18:10
+311,oulous,93-b peachtree rd,lan,404-351-9533,processed,2020-11-09 16:17:43
+312,veni vidi vici,1 14th st,lan,404-875-8424,processed,2016-08-12 11:53:43
+313,alain rondelli,26 clement st,an francisc,415-387-0408,processed,2022-04-09 19:11:14
+314,qu,52 california st,an francisc,415-956-9662,processed,2015-09-17 06:53:30
+315,oulevar, mission st,an francisc,415-543-6084,processed,2020-10-12 13:27:35
+316,cafe claude, claude ln,an francisc,415-392-3505,processed,2019-08-01 12:00:22
+317,campton place,40 stockton st,an francisc,415-955-5555,processed,2018-05-05 07:26:43
+318,chez michel,04 north point st,an francisc,415-775-7036,processed,2017-02-10 22:04:58
+319,fleur de lys,77 sutter st,an francisc,415-673-7779,processed,2018-07-13 08:59:03
+320,ringal,70 fourth st,an francisc,415-543-0573,processed,2017-11-22 03:37:51
+321,hawthorne lane,2 hawthorne st,an francisc,415-777-9779,processed,2019-02-27 17:49:47
+322,khan toke thai house,937 geary blvd,an francisc,415-668-6654,processed,2021-02-10 23:42:37
+323,la folie,316 polk st,an francisc,415-776-5577,processed,2018-05-22 13:21:05
+324,lulu restaurant-bis-cafe,16 folsom st,an francisc,415-495-5775,processed,2020-10-27 12:00:50
+325,masas,48 bush st,an francisc,415-989-7154,processed,2020-10-04 09:20:33
+326,ifun,737 post st,an francisc,415-922-0337,processed,2021-01-14 10:21:38
+327,plumpjack cafe,127 fillmore st,an francisc,415-563-4755,processed,2020-05-04 05:54:56
+328,ostri,45 post st,an francisc,415-776-7825,processed,2016-12-05 21:02:39
+329,ritz-carlton dining room (san francisco),00 stockton st,an francisc,415-296-7465,processed,2019-04-18 22:51:04
+330,rose pistola,32 columbus ave,an francisc,415-399-0499,processed,2021-10-16 08:19:39
+331,ritz-carlton cafe (atlanta),81 peachtree st,lan,404-659-0400,processed,2023-10-18 18:44:53
+534,arnie mortons of chicago,35 s. la cienega blv,os angele,310/246-1501,processed,2017-04-02 07:41:39
+535,arts delicatessen,2224 ventura blvd,tudio cit,818/762-1221,processed,2023-04-11 01:06:07
+536,hotel bel-air,01 stone canyon rd,el ai,310/472-1211,processed,2017-09-09 23:23:36
+537,cafe bizou,4016 ventura blvd,herman oak,818/788-3536,processed,2017-06-29 15:36:26
+538,ampanil,24 s. la brea ave,os angele,213/938-1447,processed,2019-07-29 08:15:29
+539,chinois on main,709 main st,anta monic,310/392-9025,processed,2017-06-28 09:18:14
+540,itru,703 melrose ave,os angele,213/857-0034,processed,2020-05-29 19:58:57
+541,eni,358 sunset blvd. wes,llywo,213/848-6677,processed,2021-03-26 16:35:11
+542,ranit,3725 w. malibu rd,li,310/456-0488,processed,2015-12-20 01:42:37
+543,grill on the alley,560 dayton wa,os angele,310/276-0615,processed,2019-12-07 19:51:27
+544,restaurant katsu,972 n. hillhurst ave,os angele,213/665-1891,processed,2019-12-02 09:38:36
+545,lorangerie,03 n. la cienega blvd,os angele,310/652-9770,processed,2023-08-12 05:41:22
+546,le chardonnay,284 melrose ave,os angele,213/655-8880,processed,2015-07-07 21:39:40
+547,locanda veneta,rd st,os angele,310/274-1893,processed,2023-05-16 20:03:46
+548,atsuhis,29 n. la cienega blvd,everly hill,310/659-9639,processed,2024-03-28 20:26:10
+549,the palm,001 santa monica blvd,os angele,310/550-8811,processed,2023-03-30 10:27:47
+550,atin,955 melrose ave,os angele,213/467-1108,processed,2023-05-15 17:53:57
+551,philippes the original,001 n. alameda st,os angele,213/628-3781,processed,2015-10-16 01:33:17
+552,pinot bistro,2969 ventura blvd,os angele,818/990-0500,processed,2021-02-17 00:05:02
+553,rex il ristorante,17 s. olive st,os angele,213/627-2300,processed,2022-01-24 09:49:40
+554,pag,114 horn ave,os angele,310/652-4025,processed,2024-02-11 01:04:13
+555,alentin,115 pico blvd,anta monic,310/829-4313,processed,2023-11-21 17:02:07
+556,yujean kangs gourmet chinese cuisine,7 n. raymond ave,os angele,818/585-0855,processed,2023-10-06 15:50:57
+557,21 club,1 w. 52nd st,ew yor,212/582-7200,processed,2015-05-11 17:14:48
+558,quavi,3 w. 54th st,ew yor,212/307-7311,processed,2019-08-20 10:35:24
+559,ureol,4 e. 61st st,ew yor,'212/ 319-1660',processed,2020-07-25 00:29:41
+560,cafe lalo,01 w. 83rd st,ew yor,212/496-6031,processed,2018-10-07 10:09:34
+561,cafe des artistes, w. 67th st,ew yor,212/877-3500,processed,2020-03-22 05:21:55
+562,carmines,450 broadway  between 90th and 91st sts,ew yor,212/362-2200,processed,2017-06-28 18:02:26
+563,carnegie deli,54 7th ave.  between 54th and 55th sts,ew yor,212/757-2245,processed,2018-10-09 22:27:16
+564,hanterell, harrison st.  near hudson st,ew yor,212/966-6960,processed,2023-08-21 22:37:58
+565,anie,0 e. 76th st,ew yor,212/288-0033,processed,2019-03-25 07:49:08
+566,awa,10 e. 58th st,ew yor,212/355-7555,processed,2023-07-15 19:32:36
+567,elidi,43 e. 58th st,ew yor,212/758-1479,processed,2015-09-05 18:51:55
+568,four seasons grill room,9 e. 52nd st,ew yor,212/754-9494,processed,2021-05-10 12:18:44
+569,gotham bar & grill,2 e. 12th st,ew yor,212/620-4020,processed,2022-10-04 21:56:06
+570,gramercy tavern,2 e. 20th st.  between park ave. s and broadwa,ew yor,212/477-0777,processed,2018-10-02 21:38:41
+571,island spice,02 w. 44th st,ew yor,212/765-1737,processed,2016-10-31 03:10:56
+572,jo jo,60 e. 64th st,ew yor,212/223-5656,processed,2018-01-06 00:18:47
+573,la caravelle,3 w. 55th st,ew yor,212/586-4252,processed,2020-08-18 08:57:16
+574,la cote basque,0 w. 55th st.  between 5th and 6th ave,ew yor,212/688-6525,processed,2022-04-19 07:12:47
+575,le bernardin,55 w. 51st st,ew yor,212/489-1515,processed,2019-03-10 08:56:38
+576,les celebrites,60 central park ,ew yor,212/484-5113,processed,2019-11-04 08:39:08
+577,espinass, e. 55th st,ew yor,212/339-6719,processed,2018-09-05 01:43:45
+578,utec,49 e. 50th st,ew yor,212/752-2225,processed,2024-02-11 01:33:20
+579,manhattan ocean club,7 w. 58th st,ew yor,'212/ 371-7777',processed,2022-11-19 09:50:53
+580,arc,05 e. 58th st,ew yor,212/754-6272,processed,2021-03-27 09:48:27
+581,mesa grill,02 5th ave.  between 15th and 16th sts,ew yor,212/807-7400,processed,2016-07-21 00:38:12
+582,mi cocina,7 jane st.  off hudson st,ew yor,212/627-8273,processed,2015-08-26 13:33:54
+583,ontrache,39 w. broadway  between walker and white sts,ew yor,'212/ 219-2777',processed,2016-04-07 21:42:42
+584,cean,5 e. 54th st,ew yor,212/759-5941,processed,2016-09-15 02:33:24
+585,park avenue cafe,00 e. 63rd st,ew yor,212/644-1900,processed,2022-04-02 18:25:16
+586,etrossia,82 w. 58th st,ew yor,212/245-2214,processed,2017-09-15 01:04:20
+587,icholin,5 w. 64th st,ew yor,212/724-8585,processed,2019-10-13 09:27:11
+588,isce,5 ave. a at 6th st,ew yor,212/260-6660,processed,2015-07-14 13:54:03
+589,rainbow room,0 rockefeller plaz,ew yor,212/632-5000,processed,2021-05-14 13:15:28
+590,river cafe, water st. at the east rive,ookl,718/522-5200,processed,2021-12-30 04:13:12
+591,san domenico,40 central park ,ew yor,212/265-5959,processed,2022-06-14 23:37:20
+592,second avenue deli,56 2nd ave. at 10th st,ew yor,212/677-0606,processed,2015-12-07 03:47:52
+593,eryn,1 e. 53rd st,ew yor,212/980-9393,processed,2018-09-15 01:18:15
+594,shun lee west,3 w. 65th st,ew yor,212/371-8844,processed,2020-11-16 09:59:50
+595,sign of the dove,110 3rd ave. at 65th st,ew yor,212/861-8080,processed,2015-06-24 18:14:18
+596,smith & wollensky,01 e. 49th st,ew yor,212/753-1530,processed,2020-02-14 03:58:41
+597,tavern on the green,n central park at 67th st,ew yor,212/873-3200,processed,2017-12-02 08:31:30
+598,uncle nicks,47 9th ave.  between 50th and 51st sts,ew yor,212/315-1726,processed,2022-03-29 02:38:52
+599,union square cafe,1 e. 16th st,ew yor,212/243-4020,processed,2020-09-01 15:42:17
+600,virgils,52 w. 44th st,ew yor,'212/ 921-9494',processed,2022-10-18 04:35:56
+601,chins,200 las vegas blvd. ,as vega,702/733-8899,processed,2017-01-03 13:19:12
+602,coyote cafe,799 las vegas blvd. ,as vega,702/891-7349,processed,2018-12-23 09:41:27
+603,le montrachet,000 w. paradise rd,as vega,702/732-5111,processed,2021-03-06 06:30:40
+604,palace court,570 las vegas blvd. ,as vega,702/731-7547,processed,2021-04-19 07:13:50
+605,second street grille,00 e. fremont st,as vega,702/385-3232,processed,2021-12-05 15:14:47
+606,steak house,880 las vegas blvd. ,as vega,702/734-0410,processed,2017-06-23 05:44:01
+607,illerma,245 e. flamingo rd,as vega,702/731-4036,processed,2021-12-30 14:06:02
+608,bruzz,355 peachtree rd.  peachtree battle shopping cente,lan,404/261-8186,processed,2017-01-11 09:35:03
+609,acchanali,125 piedmont rd.  near peachtree rd,lan,404/365-0410,processed,2021-09-12 12:48:19
+610,bones,130 piedmont roa,lan,404/237-2663,processed,2021-03-05 06:32:12
+611,brasserie le coze,393 peachtree rd.  lenox square mall  near neiman marcu,lan,404/266-1440,processed,2021-04-14 07:29:01
+612,buckhead diner,073 piedmont roa,lan,404/262-3336,processed,2016-07-06 17:07:10
+613,iboulett,529 piedmont ave,lan,404/874-7600,processed,2021-03-06 15:16:24
+614,electable, margaret mitchell sq,lan,404/681-2909,processed,2017-04-04 03:37:13
+615,georgia grille,290 peachtree rd.  peachtree square shopping cente,lan,404/352-3517,processed,2019-10-08 03:47:31
+616,hedgerose heights inn,90 e. paces ferry rd,lan,404/233-7673,processed,2018-10-23 19:15:41
+617,heera of india,95 piedmont ave.  rio shopping mal,lan,404/876-4408,processed,2022-06-16 08:32:35
+618,indigo coastal grill,397 n. highland ave,lan,404/876-0676,processed,2019-09-09 20:14:51
+619,la grotta,637 peachtree rd.  peachtree house condominiu,lan,404/231-1368,processed,2020-04-26 23:39:03
+620,mary macs tea room,24 ponce de leon ave,lan,404/876-1800,processed,2023-05-19 09:29:59
+621,nikolais roof,55 courtland st.  at harris st,lan,404/221-6362,processed,2021-11-10 18:47:38
+622,panos and pauls,232 w. paces ferry rd,lan,404/261-3662,processed,2019-05-12 02:06:38
+623,cafe  ritz-carlton  buckhead,434 peachtree rd,lan,404/237-2700,processed,2019-07-11 13:12:49
+624,dining room  ritz-carlton  buckhead,434 peachtree rd,lan,404/237-2700,processed,2020-11-15 15:16:34
+625,restaurant  ritz-carlton  atlanta,81 peachtree st,lan,404/659-0400,processed,2024-02-22 09:43:00
+626,oulous, peachtree rd,lan,404/351-9533,processed,2016-11-01 20:03:17
+627,veni vidi vici,1 14th st,lan,404/875-8424,processed,2015-03-23 06:25:03
+628,alain rondelli,26 clement st,an francisc,415/387-0408,processed,2020-09-08 04:59:01
+629,qu,52 california st,an francisc,415/956-9662,processed,2017-03-05 14:32:01
+630,oulevar, mission st,an francisc,415/543-6084,processed,2019-08-24 21:53:03
+631,cafe claude, claude la,an francisc,415/392-3505,processed,2023-08-31 20:43:48
+632,campton place,40 stockton st,an francisc,415/955-5555,processed,2018-10-15 21:36:02
+633,chez michel,04 northpoin,an francisc,415/775-7036,processed,2018-03-23 03:17:51
+634,fleur de lys,77 sutter st,an francisc,415/673-7779,processed,2017-10-10 11:40:45
+635,ringal,70 4th st,an francisc,415/543-0573,processed,2022-03-08 13:29:37
+636,hawthorne lane,2 hawthorne st,an francisc,415/777-9779,processed,2021-03-27 07:46:37
+637,khan toke thai house,937 geary blvd,an francisc,415/668-6654,processed,2023-11-27 04:58:42
+638,la folie,316 polk st,an francisc,415/776-5577,processed,2018-05-03 12:22:19
+639,ul,16 folsom st,an francisc,415/495-5775,processed,2023-10-17 15:53:46
+640,masas,48 bush st,an francisc,415/989-7154,processed,2020-11-24 08:45:06
+641,mifune japan center  kintetsu building,737 post st,an francisc,415/922-0337,processed,2023-01-24 02:49:24
+642,plumpjack cafe,201 fillmore st,an francisc,415/563-4755,processed,2015-01-04 06:13:52
+643,ostri,45 post st,an francisc,415/776-7825,processed,2018-01-10 23:06:09
+644,ritz-carlton restaurant and dining room,00 stockton st,an francisc,415/296-7465,processed,2016-04-17 13:45:57
+645,rose pistola,32 columbus ave,an francisc,415/399-0499,processed,2015-04-04 23:18:23
+646,ol,3 e. 22nd st,ew yor,212/228-2200,processed,2023-05-03 18:24:18
+647,il nido,51 e. 53rd st,ew yor,212/753-8450,processed,2017-10-09 14:03:53
+648,em,45 w. 53rd st,ew yor,212/581-4242,processed,2017-11-04 01:48:12
+649,adrianos ristorante,930 beverly glen circl,os angele,310/475-9807,processed,2016-04-09 04:45:59
+650,barney greengrass,570 wilshire blvd,everly hill,310/777-5877,processed,2023-07-04 22:29:51
+651,eaurivag,6025 pacific coast hwy,li,310/456-5733,processed,2016-01-20 23:16:51
+652,bistro garden,76 n. canon dr,os angele,310/550-3900,processed,2024-01-28 22:59:45
+653,border grill,th st,os angele,310/451-1655,processed,2022-08-20 20:36:33
+654,broadway deli,rd st. promenad,anta monic,310/451-0616,processed,2021-12-18 23:05:20
+655,cabrea,46 s. la brea ave,os angele,213/938-2863,processed,2023-12-24 05:47:29
+656,cadel sol,100 cahuenga blvd,os angele,818/985-4669,processed,2021-01-28 16:05:24
+657,cafe pinot,00 w. fifth st,os angele,213/239-6500,processed,2018-01-31 17:45:08
+658,california pizza kitchen,07 s. beverly dr,os angele,310/275-1101,processed,2020-02-21 04:59:31
+659,canters,19 n. fairfax ave,os angele,213/651-2030.,processed,2015-07-03 18:33:27
+660,av,rd st,os angele,213/658-8898,processed,2018-05-27 09:20:32
+661,cha cha cha,56 n. virgil ave,os angele,213/664-7723,processed,2021-06-30 19:13:02
+662,chan dara,10 n. larchmont blvd,os angele,213/467-1052,processed,2020-07-28 06:17:45
+663,clearwater cafe,68 w. colorado blvd,os angele,818/356-0959,processed,2023-07-04 09:05:57
+664,dining room,500 wilshire blvd,os angele,310/275-5200,processed,2021-01-23 18:20:58
+665,ive,0250 santa monica blvd,os angele,310/788-,processed,2020-07-20 14:36:46
+666,rag,628 wilshire blvd,anta monic,310/828-1585,processed,2020-11-13 23:39:12
+667,drais,30 n. la cienega blvd,os angele,310/358-8585,processed,2021-01-07 22:11:44
+668,dynasty room,30 hilgard ave,os angele,310/208-8765,processed,2016-12-06 21:02:25
+669,clips,800 melrose ave,os angele,310/724-5959,processed,2015-09-16 15:01:16
+670,ed debevics,34 n. la cieneg,os angele,310/659-1952,processed,2024-03-29 03:23:54
+671,el cholo,121 s. western ave,os angele,213/734-2773,processed,2023-05-26 05:40:08
+672,gillilands,424 main st,anta monic,310/392-3901,processed,2021-12-03 09:36:42
+673,gladstones, fish 17300 pacific coast hwy. at sunset blvd,acific palisade,310/454-3474,processed,2022-04-06 20:18:29
+674,hard rock cafe,600 beverly blvd,os angele,310/276-7605,processed,2015-04-05 19:16:50
+675,harrys bar & american grill,020 ave. of the star,os angele,310/277-2333,processed,2021-03-23 09:02:59
+676,il fornaio cucina italiana,01 n. beverly dr,os angele,310/550-8330,processed,2016-02-06 23:55:43
+677,jack sprats grill,0668 w. pico blvd,os angele,310/837-6662,processed,2018-01-17 00:04:37
+678,jacksons farm,39 n. beverly driv,os angele,310/273-5578,processed,2024-01-14 11:24:13
+679,jimmys,01 moreno dr,os angele,310/552-2394,processed,2019-06-16 02:30:24
+680,os,255 sunset blvd,os angele,310/276-1886,processed,2022-09-06 08:22:40
+681,le colonial,783 beverly blvd,os angele,310/289-0660,processed,2016-12-13 09:13:56
+682,le dome,720 sunset blvd,os angele,310/659-6919,processed,2017-05-16 02:44:04
+683,louises trattoria,500 los feliz blvd,os angele,213/667-0777,processed,2021-06-29 21:46:29
+684,mon kee seafood restaurant,79 n. spring st,os angele,213/628-6717,processed,2021-10-19 03:18:13
+685,mortons,764 melrose ave,os angele,310/276-5205,processed,2015-03-20 04:59:01
+686,nate n als,14 n. beverly dr,os angele,310/274-0101,processed,2020-07-14 14:57:32
+687,icol,01 s. figueroa st,os angele,213/485-0927,processed,2024-03-10 21:01:23
+688,ocean avenue,401 ocean ave,anta monic,310/394-5669,processed,2021-12-04 08:05:20
+689,rlean,1705 national blvd,os angele,310/479-4187,processed,2021-02-18 23:23:25
+690,pacific dining car,th st,os angele,213/483-6000,processed,2023-02-25 23:34:33
+691,patys,0001 riverside dr,oluca lak,818/761-9126,processed,2016-11-25 07:05:27
+692,pinot hollywood,448 n. gower st,os angele,213/461-8800,processed,2020-11-03 10:04:53
+693,ost,4928 ventura blvd,herman oak,818/784-4400,processed,2016-05-31 22:32:16
+694,reg,62 n. camden dr,os angele,310/277-7346,processed,2016-05-29 08:28:05
+695,rjs the rib joint,52 n. beverly dr,os angele,310/274-7427,processed,2015-02-21 22:16:09
+696,em,rd st. promenad,anta monic,310/393-6545,processed,2024-03-28 22:51:15
+697,restaurant horikawa,11 s. san pedro st,os angele,213/680-9355,processed,2020-01-20 18:14:47
+698,roscoes house of chicken n waffles,514 n. gower st,os angele,213/466-9329,processed,2020-10-23 09:10:33
+699,schatzi on main,110 main st,os angele,310/399-4800,processed,2021-10-08 11:37:12
+700,of,rd st,os angele,213/651-0346,processed,2023-12-26 08:50:58
+701,winger,020 beverly blvd,os angele,213/653-5858,processed,2017-05-25 09:14:17
+702,tavola calda,371 melrose ave,os angele,213/658-6340,processed,2015-05-02 01:06:56
+703,the mandarin,30 n. camden dr,os angele,310/859-0926,processed,2020-10-11 21:40:32
+704,tommy tangs,313 melrose ave,os angele,213/937-5733,processed,2024-03-08 17:52:37
+705,tra di noi,835 cross creek rd,os angele,310/456-0169,processed,2020-10-06 12:44:04
+706,trader vics,876 wilshire blvd,os angele,310/276-6345,processed,2020-03-09 05:27:07
+707,id,930 north hillhurst ave,os feli,213/660-4446,processed,2018-07-27 05:53:25
+708,west beach cafe,0 n. venice blvd,os angele,310/823-5396,processed,2021-03-02 00:50:28
+709,20 mott,0 mott st.  between bowery and pell st,ew yor,212/964-0380,processed,2016-08-19 11:10:25
+710,9 jones street, jones st,ew yor,212/989-1220,processed,2019-06-01 11:38:57
+711,drienn,00 5th ave. at 55th st,ew yor,212/903-3918,processed,2020-01-03 12:07:33
+712,grotiko,22 e. 14 st.  between 1st and 2nd aves,ew yor,212/473-2602,processed,2016-05-09 19:49:49
+713,j,37 broadway at 22nd st,ew yor,212/473-8388,processed,2020-03-12 18:40:56
+714,lam,04 e. 48th st,ew yor,'212/ 759-0590',processed,2016-02-05 01:21:22
+715,alleys end,11 w. 17th st,ew yor,212/627-8899,processed,2016-03-07 15:49:46
+716,ambassador grill, united nations plaza at 44th st,ew yor,212/702-5014,processed,2016-09-03 06:32:00
+717,american place, park ave. at 32nd st,ew yor,212/684-2122,processed,2020-11-11 14:56:54
+718,anche vivolo,22 e. 58th st.  between 2nd and 3rd aves,ew yor,212/308-0112,processed,2022-03-27 08:08:28
+719,rizon,06 206 e. 60th st,ew yor,212/838-0440,processed,2015-08-12 10:39:01
+720,arturos,06 w. houston st.  off thompson st,ew yor,212/677-3820,processed,2021-08-20 15:19:37
+721,au mandarin,00-250 vesey st. world financial cente,ew yor,212/385-0313,processed,2015-11-14 14:45:03
+722,bar anise,022 3rd ave.  between 60th and 61st sts,ew yor,212/355-1112,processed,2017-05-07 17:01:11
+723,arbett,21 w. 46th st,ew yor,212/246-9171,processed,2022-07-18 21:50:22
+724,ben bensons,23 w. 52nd st,ew yor,212/581-8888,processed,2016-07-11 22:34:39
+725,big cup,28 8th ave.  between 21st and 22nd sts,ew yor,212/206-0059,processed,2023-09-29 09:03:18
+726,billys,48 1st ave.  between 52nd and 53rd sts,ew yor,212/753-1870,processed,2021-06-18 00:24:32
+727,boca chica,3 1st ave.  near 1st st,ew yor,212/473-0108,processed,2015-04-28 22:05:56
+728,oontha,393a 2nd ave.  between 72nd and 73rd sts,ew yor,212/249-8484,processed,2022-04-09 15:05:01
+729,outeri,20 e. 59th st.  off 1st ave,ew yor,212/758-0323,processed,2019-07-03 06:25:20
+730,brothers bar-b-q,25 varick st. at clarkston st,ew yor,212/727-2775,processed,2018-01-10 21:33:06
+731,run,40 e. 58th st,ew yor,212/688-4190,processed,2021-08-19 01:36:26
+732,bryant park grill  roof restaurant and bp cafe,5 w. 40th st.  between 5th and 6th aves,ew yor,212/840-6500,processed,2019-07-27 08:05:40
+733,,03 waverly pl.  near washington sq,ew yor,212/254-1200,processed,2023-03-28 19:07:14
+734,,11 e. 22nd st.  between park ave. s and lexington ave,ew yor,212/995-8500,processed,2016-06-27 11:12:18
+735,cafe bianco,486 2nd ave.  between 77th and 78th sts,ew yor,212/988-2655,processed,2015-02-20 22:16:44
+736,cafe botanica,60 central park ,ew yor,212/484-5120,processed,2020-02-20 10:36:54
+737,cafe la fortuna,9 w. 71st st,ew yor,212/724-5846,processed,2018-11-09 23:24:38
+738,cafe luxembourg,00 w. 70th st,ew yor,212/873-7411,processed,2015-10-28 05:16:47
+739,cafe pierre, e. 61st st,ew yor,212/940-8185,processed,2020-07-22 23:06:10
+740,cafe centro,00 park ave.  between 45th st. and vanderbilt ave,ew yor,212/818-1222,processed,2019-07-10 18:22:39
+741,cafe fes,46 w. 4th st. at charles st,ew yor,212/924-7653,processed,2019-04-09 15:25:59
+742,caffe dante,1 macdougal st.  between houston and bleeker sts,ew yor,212/982-5275,processed,2023-01-14 13:31:38
+743,caffe dellartista,6 greenwich ave,ew yor,212/645-4431,processed,2020-07-06 09:21:06
+744,caffe lure,69 sullivan st.  between houston and bleecker sts,ew yor,212/473-2642,processed,2021-10-23 01:52:47
+745,caffe reggio,19 macdougal st.  between 3rd and bleecker sts,ew yor,212/475-9557,processed,2017-12-11 12:39:22
+746,caffe roma,85 broome st. at mulberr,ew yor,212/226-8413,processed,2015-12-14 01:37:21
+747,caffe vivaldi,2 jones st. at bleecker st,ew yor,212/691-7538,processed,2023-03-13 09:05:10
+748,caffe bondi ristorante, w. 20th st,ew yor,212/691-8136,processed,2020-09-01 18:05:45
+749,capsouto freres,51 washington st.  near watts st,ew yor,212/966-4900,processed,2015-09-30 08:45:41
+750,captains table,60 2nd ave. at 46th st,ew yor,212/697-9538,processed,2019-12-14 09:10:30
+751,casa la femme,50 wooster st.  between houston and prince sts,ew yor,212/505-0005,processed,2022-09-07 20:06:19
+752,cendrillon asian grill & marimba bar,5 mercer st.  between broome and grand sts,ew yor,212/343-9012,processed,2019-08-24 03:52:09
+753,chez jacqueline,2 macdougal st.  between w. houston and bleecker sts,ew yor,212/505-0727,processed,2015-05-14 09:22:55
+754,hia,60 e. 48th st,ew yor,212/371-2323,processed,2022-01-07 02:05:36
+755,china grill,0 w. 53rd st,ew yor,212/333-7788,processed,2016-08-24 21:29:53
+756,it,20 w. 51st st,ew yor,212/956-7100,processed,2023-08-19 20:11:08
+757,coco pazzo,3 e. 74th st,ew yor,212/794-0205,processed,2016-07-26 06:16:09
+758,columbus bakery,3rd sts,ew yor,212/421-0334,processed,2022-11-17 18:29:02
+759,corrado cafe,013 3rd ave.  between 60th and 61st sts,ew yor,212/753-5100,processed,2017-09-19 16:11:49
+760,cupcake cafe,22 9th ave. at 39th st,ew yor,212/465-1530,processed,2017-11-08 01:00:26
+761,da nico,64 mulberry st.  between grand and broome sts,ew yor,212/343-1212,processed,2022-12-13 09:35:20
+762,dean & deluca,21 prince st,ew yor,212/254-8776,processed,2023-06-23 10:51:28
+763,iv,41 w. broadway  near grand st,ew yor,212/941-9024,processed,2019-12-22 14:15:25
+764,dix et sept,81 w. 10th st,ew yor,212/645-8023,processed,2022-02-05 19:21:44
+765,ock,33 3rd ave. at 40th st,ew yor,'212/ 986-8080',processed,2019-04-23 07:05:35
+766,duane park cafe,57 duane st.  between w. broadway and hudson st,ew yor,212/732-5555,processed,2022-05-09 17:25:49
+767,el teddys,19 w. broadway  between franklin and white sts,ew yor,212/941-7070,processed,2016-07-02 15:45:33
+768,emilys,325 5th ave. at 111th st,ew yor,212/996-1212,processed,2020-05-15 17:24:03
+769,empire korea, e. 32nd st,ew yor,212/725-1333,processed,2023-12-09 01:16:31
+770,ernies,150 broadway  between 75th and 76th sts,ew yor,212/496-1588,processed,2017-02-17 12:15:53
+771,evergreen cafe,288 1st ave. at 69th st,ew yor,212/744-3266,processed,2015-09-21 06:10:45
+772,f. ille ponte ristorante,9 desbrosses st.  near west st,ew yor,212/226-4621,processed,2023-10-26 08:08:03
+773,eli,40 w. broadway at grand st,ew yor,212/431-0021,processed,2015-11-30 16:00:43
+774,errie,9 e. 65th st,ew yor,212/772-9000,processed,2015-09-20 13:47:48
+775,fifty seven fifty seven,7 e. 57th st,ew yor,212/758-5757,processed,2020-11-03 08:19:31
+776,film center cafe,35 9th ave.  between 44th and 45th sts,ew yor,'212/ 262-2525',processed,2016-12-21 00:46:04
+777,fiorellos roman cafe,900 broadway  between 63rd and 64th sts,ew yor,212/595-5330,processed,2019-01-23 02:43:41
+778,irehous,22 columbus ave.  between 85th and 86th sts,ew yor,212/595-3139,processed,2021-05-14 14:21:11
+779,irs,7 1st ave.  between 5th and 6th sts,ew yor,212/674-3823,processed,2022-02-16 19:47:45
+780,fishin eddie,3 w. 71st st,ew yor,212/874-3474,processed,2023-07-29 00:08:30
+781,fleur de jour,48 e. 62nd st,ew yor,212/355-2020,processed,2023-07-14 05:56:25
+782,lower,1 west 17th st.  between 5th and 6th aves,ew yor,212/691-8888,processed,2023-02-24 02:30:51
+783,ollonic, w. 24th st,ew yor,212/691-6359,processed,2015-08-18 00:44:16
+784,fraunces tavern,4 pearl st. at broad st,ew yor,212/269-0144,processed,2019-09-08 17:31:00
+785,french roast,58 6th ave. at 11th st,ew yor,212/533-2233,processed,2019-12-11 21:48:16
+786,french roast cafe,340 broadway at 85th st,ew yor,212/799-1533,processed,2018-12-24 18:18:43
+787,frico bar,02 w. 43rd st.  off 9th ave,ew yor,212/564-7272,processed,2018-02-02 17:38:33
+788,fujiyama mama,67 columbus ave.  between 82nd and 83rd sts,ew yor,212/769-1144,processed,2016-03-05 04:08:23
+789,gabrielas,85 amsterdam ave. at 93rd st,ew yor,212/961-0574,processed,2019-11-23 14:35:57
+790,gallaghers,28 w. 52nd st,ew yor,212/245-5336,processed,2020-05-18 04:42:10
+791,giannis,5 fulton st,ew yor,212/608-7300,processed,2021-09-25 00:20:32
+792,iraf,08 e. 58th st.  between 2nd and 3rd aves,ew yor,212/752-3054,processed,2021-05-12 00:34:30
+793,loba,3 93 2nd ave.  between 5th and 6th sts,ew yor,212/477-8427,processed,2019-03-11 10:57:11
+794,golden unicorn,8 e. broadway at catherine st,ew yor,'212/ 941-0911',processed,2017-05-18 18:45:50
+795,grand ticino,28 thompson st.  between w. 3rd and bleecker sts,ew yor,212/777-5922,processed,2021-09-27 18:13:29
+796,alcyo,51 w. 54th st.  in the rihga royal hote,ew yor,212/468-8888,processed,2016-01-27 11:01:11
+797,hard rock cafe,21 w. 57th st,ew yor,212/489-6565,processed,2016-02-26 09:46:06
+798,hi-life restaurant and lounge,340 1st ave. at 72nd st,ew yor,212/249-3600,processed,2016-11-11 09:40:34
+799,om,0 cornelia st.  between bleecker and w. 4th st,ew yor,212/243-9579,processed,2016-08-24 14:22:34
+800,hudson river club, world financial cente,ew yor,212/786-1500,processed,2019-02-26 01:49:17
+801,i trulli,22 e. 27th st.  between lexington and park aves,ew yor,212/481-7372,processed,2020-06-26 15:45:36
+802,il cortile,25 mulberry st.  between canal and hester sts,ew yor,212/226-6060,processed,2019-10-11 19:00:12
+803,inca grill,92 broome st.  near w. broadwa,ew yor,212/966-3371,processed,2020-05-02 19:55:30
+804,ndochin,30 lafayette st.  between 4th st. and astor pl,ew yor,212/505-5111,processed,2022-08-30 07:08:09
+805,internet cafe,2 e. 3rd st.  between 1st and 2nd aves,ew yor,'212/ 614-0747',processed,2023-07-26 10:08:51
+806,panem,3 w. 46th st,ew yor,212/730-5848,processed,2020-09-14 13:44:59
+807,jean lafitte,8 w. 58th st,ew yor,212/751-2323,processed,2017-11-17 21:40:48
+808,jewel of india,5 w. 44th st,ew yor,212/869-5544,processed,2019-12-18 01:02:26
+809,jimmy sungs,19 e. 44th st.  between 2nd and 3rd aves,ew yor,212/682-5678,processed,2022-11-17 22:50:25
+810,joe allen,26 w. 46th st,ew yor,212/581-6464,processed,2017-01-06 12:47:48
+811,judson grill,52 w. 52nd st,ew yor,212/582-5252,processed,2017-05-06 04:38:46
+812,labsinthe,27 e. 67th st,ew yor,212/794-4950,processed,2022-10-22 06:58:34
+813,lauberge,191 1st ave.  between 64th and 65th sts,ew yor,212/288-8791,processed,2017-05-05 08:30:19
+814,lauberge du midi,10 w. 4th st.  between w. 12th and bank sts,ew yor,212/242-4705,processed,2016-09-12 13:24:33
+815,ludo,32 lafayette st.  near astor pl,ew yor,212/388-0978,processed,2019-10-22 17:21:09
+816,la reserve, w. 49th st,ew yor,212/247-2993,processed,2020-09-21 04:21:47
+817,lanza restaurant,68 1st ave.  between 10th and 11th sts,ew yor,212/674-7014,processed,2022-10-20 04:24:00
+818,lattanzi ristorante,61 w. 46th st,ew yor,212/315-0980,processed,2015-09-04 13:43:59
+819,ayl,11 w. broadway at franklin st,ew yor,212/431-0700,processed,2021-09-18 13:46:00
+820,le chantilly,06 e. 57th st,ew yor,212/751-2931,processed,2023-05-08 16:14:51
+821,le colonial,49 e. 57th st,ew yor,'212/ 752-0808',processed,2015-11-06 22:43:21
+822,le gamin,0 macdougal st.  between houston and prince sts,ew yor,212/254-4678,processed,2016-05-27 12:40:32
+823,le jardin,5 cleveland pl.  near spring st,ew yor,212/343-9599,processed,2016-04-21 20:43:03
+824,le madri,68 w. 18th st,ew yor,212/727-8022,processed,2020-01-16 06:31:05
+825,le marais,50 w. 46th st,ew yor,212/869-0900,processed,2015-01-14 02:02:22
+826,le perigord,05 e. 52nd st,ew yor,212/755-6244,processed,2015-11-04 11:14:53
+827,le select,07 columbus ave.  between 84th and 85th sts,ew yor,212/875-1993,processed,2018-04-16 11:50:39
+828,les halles,11 park ave. s  between 28th and 29th sts,ew yor,212/679-4111,processed,2020-05-02 18:58:42
+829,lincoln tavern,1 w. 64th st,ew yor,212/721-8271,processed,2022-08-31 15:07:28
+830,ol,0 west 22nd st.  between 5th and 6th ave,ew yor,212/675-6700,processed,2018-12-07 11:31:59
+831,lucky strike,9 grand st.  between wooster st. and w. broadwa,ew yor,212/941-0479,processed,2022-06-18 10:40:41
+832,mad fish,182 broadway  between 77th and 78th sts,ew yor,212/787-0202,processed,2022-08-18 12:26:48
+833,main street,46 columbus ave.  between 81st and 82nd sts,ew yor,212/873-5025,processed,2017-07-08 10:44:27
+834,mangia e bevi,00 9th ave. at 53rd st,ew yor,212/956-3976,processed,2020-09-25 17:06:54
+835,manhattan cafe,161 1st ave.  between 63rd and 64th sts,ew yor,212/888-6556,processed,2022-08-26 18:25:12
+836,manila garden,25 e. 14th st.  between 1st and 2nd aves,ew yor,212/777-6314,processed,2015-09-04 19:47:01
+837,arich,42 e. 46th st.  between 1st and 2nd aves,ew yor,212/370-1866,processed,2017-05-30 04:04:27
+838,marquet patisserie,5 e. 12th st.  between 5th ave. and university pl,ew yor,212/229-9313,processed,2015-12-10 14:30:31
+839,atc,60 mercer st.  between houston and prince sts,ew yor,212/906-9173,processed,2020-05-05 05:06:23
+840,matthews,030 3rd ave. at 61st st,ew yor,212/838-4343,processed,2020-12-09 08:53:11
+841,mavalli palace,6 e. 29th st,ew yor,212/679-5535,processed,2020-09-25 04:51:38
+842,milan cafe and coffee bar,20 w. 23rd st,ew yor,212/807-1801,processed,2017-09-29 00:23:06
+843,monkey bar,0 e. 54th st,ew yor,212/838-2600,processed,2019-07-14 15:49:53
+844,ontie,134 1st ave.   between 62nd and 63rd sts,ew yor,212/421-4433,processed,2016-10-22 21:33:49
+845,mortons,51 5th ave. at 45th st,ew yor,212/972-3315,processed,2020-03-07 16:28:12
+846,motown cafe,04 w. 57th st.  near 6th ave,ew yor,212/581-8030,processed,2015-06-15 22:05:08
+847,new york kom tang soot bul house,2 w. 32nd st,ew yor,'212/ 947-8482',processed,2019-06-07 03:04:17
+848,new york noodletown,8 1/2 bowery at bayard st,ew yor,212/349-0923,processed,2016-02-13 21:03:25
+849,ewsba, w. 19th st,ew yor,212/255-3996,processed,2018-02-02 15:54:44
+850,deo,45 w. broadway at thomas st,ew yor,212/233-0507,processed,2023-02-19 15:12:01
+851,rs,22 w. 46th st,ew yor,212/489-7212,processed,2020-08-10 02:36:28
+852,osteria al droge,42 w. 44th st,ew yor,212/944-3643,processed,2020-10-22 12:15:39
+853,tab,8 e. 56th st,ew yor,212/223-7575,processed,2022-07-11 11:14:29
+854,acific,38 lafayette st.  between canal and howard sts,ew yor,212/941-4168,processed,2024-02-28 19:08:15
+855,ali,51 w. 51st. st,ew yor,212/245-4850,processed,2022-08-30 07:15:35
+856,ami,065 1st ave.  at 58th st,ew yor,212/644-9258,processed,2016-02-03 22:28:47
+857,parioli romanissimo,4 e. 81st st,ew yor,212/288-2391,processed,2021-03-23 05:43:44
+858,atri,50 park ave. s at 20th st,ew yor,212/777-6211,processed,2023-12-11 07:58:25
+859,peacock alley,01 park ave.  between 49th and 50th sts,ew yor,212/872-4895,processed,2023-04-02 00:39:25
+860,pen & pencil,05 e. 45th st,ew yor,212/682-8660,processed,2016-10-09 12:05:46
+861,penang soho,09 spring st.  between greene and mercer sts,ew yor,212/274-8883,processed,2019-12-28 19:25:30
+862,ersepoli,423 2nd ave.  between 74th and 75th sts,ew yor,212/535-1100,processed,2017-03-11 06:29:03
+863,planet hollywood,40 w. 57th st,ew yor,212/333-7827,processed,2015-12-24 18:14:23
+864,omair,71 w. 46th st.  off 9th ave,ew yor,'212/ 956-3055',processed,2023-11-06 19:17:53
+865,popover cafe,51 amsterdam ave.  between 86th and 87th sts,ew yor,212/595-8555,processed,2019-05-14 14:39:27
+866,post house,8 e. 63rd st,ew yor,212/935-2888,processed,2015-05-16 15:49:46
+867,ai,00 w. 82nd st,ew yor,212/501-0776,processed,2016-01-22 00:11:36
+868,red tulip,39 e. 75th st,ew yor,212/734-4893,processed,2017-05-16 15:57:01
+869,epubli,7a union sq. w  between 16th and 17th sts,ew yor,212/627-7172,processed,2016-02-27 06:00:10
+870,roettelle a. g,26 e. 7th st.  between 1st ave. and ave. ,ew yor,212/674-4140,processed,2015-06-29 13:49:41
+871,rosa mexicano,063 1st ave. at 58th st,ew yor,212/753-7407,processed,2024-04-20 12:27:39
+872,ruths chris,48 w. 51st st,ew yor,212/245-9600,processed,2015-11-29 14:44:51
+873,.p.q.,33 mulberry st.  between hester and grand sts,ew yor,212/925-3120,processed,2019-04-27 20:37:05
+874,sal anthonys,5 irving pl,ew yor,212/982-9030,processed,2024-03-12 13:52:55
+875,sammys roumanian steak house,57 chrystie st. at delancey st,ew yor,212/673-0330,processed,2022-12-25 20:18:26
+876,san pietro,8 e. 54th st,ew yor,212/753-9015,processed,2021-01-08 11:40:16
+877,sant ambroeus,000 madison ave.  between 77th and 78th sts,ew yor,212/570-2211,processed,2018-07-04 06:19:48
+878,sarabeths kitchen,23 amsterdam ave.  between 80th and 81st sts,ew yor,212/496-6280,processed,2016-08-05 13:09:01
+879,sea grill,9 w. 49th st,ew yor,212/332-7610,processed,2022-08-07 16:35:37
+880,erendipit, 225 e. 60th st,ew yor,212/838-3531,processed,2018-05-25 02:33:27
+881,seventh regiment mess and bar,43 park ave. at 66th st,ew yor,212/744-4107,processed,2020-07-01 08:41:47
+882,fuzz,8 w. 65th st,ew yor,212/873-3700,processed,2018-03-18 17:16:54
+883,haa,7 w. 48th st,ew yor,'212/ 977-8400',processed,2024-03-31 23:58:27
+884,sofia fabulous pizza,022 madison ave.  near 79th st,ew yor,212/734-2676,processed,2016-03-23 04:56:07
+885,spring street natural restaurant & bar,2 spring st. at lafayette st,ew yor,212/966-0290,processed,2023-03-30 01:04:25
+886,stage deli,34 7th ave.  between 53rd and 54th sts,ew yor,212/245-7850,processed,2015-01-26 18:54:38
+887,tingra,28 amsterdam ave.  between 80th and 81st sts,ew yor,212/501-7515,processed,2015-04-27 05:43:17
+888,sweetntart cafe,6 mott st. at canal st,ew yor,212/334-8088,processed,2019-07-02 06:59:04
+889,t salon,43 mercer st. at prince st,ew yor,212/925-3700,processed,2023-10-31 07:25:02
+890,tang pavillion,5 w. 55th st,ew yor,212/956-6888,processed,2019-11-01 00:33:05
+891,apik,50 8th ave. at 56th st,ew yor,'212/ 397-3737',processed,2015-09-08 16:34:21
+892,teresas,03 1st ave.  between 6th and 7th sts,ew yor,212/228-0604,processed,2020-05-18 04:38:04
+893,errac,00 w. 119th st.  between amsterdam and morningside aves,ew yor,212/666-9490,processed,2018-09-14 20:42:32
+894,the coffee pot,50 9th ave. at 49th st,ew yor,212/265-3566,processed,2021-02-15 23:09:18
+895,the savannah club,420 broadway at 89th st,ew yor,212/496-1066,processed,2015-06-04 13:54:53
+896,trattoria dellarte,00 7th ave.  between 56th and 57th sts,ew yor,212/245-9800,processed,2018-06-15 00:22:04
+897,riangol,45 e. 83rd st,ew yor,212/472-4488,processed,2021-07-27 14:49:31
+898,tribeca grill,75 greenwich st.  near franklin st,ew yor,212/941-3900,processed,2023-05-10 16:17:56
+899,trois jean,54 e. 79th st.  between lexington and 3rd aves,ew yor,212/988-4858,processed,2016-02-10 10:04:58
+900,tse yang,4 e. 51st st,ew yor,212/688-5447,processed,2017-01-11 14:19:13
+901,turkish kitchen,86 3rd ave.  between 27th and 28th sts,ew yor,212/679-1810,processed,2015-03-29 03:20:31
+902,two two two,22 w. 79th st,ew yor,212/799-0400,processed,2015-10-13 05:15:51
+903,venieros pasticceria,42 e. 11th st.  near 1st ave,ew yor,212/674-7264,processed,2019-05-22 03:24:18
+904,erben,4 irving pl. at 17th st,ew yor,212/260-5454,processed,2015-01-15 18:28:50
+905,victors cafe,2 236 w. 52nd st,ew yor,212/586-7714,processed,2022-11-03 06:35:06
+906,vince & eddies,0 w. 68th st,ew yor,212/721-0068,processed,2016-06-03 08:51:42
+907,on,00 e. 54th st,ew yor,212/486-9592,processed,2016-11-25 21:20:26
+908,water club,00 e. 30th st,ew yor,212/683-3333,processed,2020-07-29 11:46:07
+909,es,3rd street steakhouse 44 w. 63rd st,ew yor,212/246-6363,processed,2018-09-19 00:41:35
+910,unt,74 1st ave.  between 10th and 11th sts,ew yor,212/614-0620,processed,2022-06-29 20:52:20
+911,zen palate,4 union sq. e at 16th st,ew yor,212/614-9291,processed,2016-05-23 02:38:12
+912,o,0 prince st.  between broadway and mercer st,ew yor,212/966-6722,processed,2019-11-23 05:36:48
+913,bbe,63 ponce de leon ave,lan,404/876-8532,processed,2016-03-14 10:31:38
+914,alecks barbecue heaven,83 martin luther king jr. dr,lan,404/525-2062,processed,2016-06-30 08:40:59
+915,annies thai castle,195 roswell rd,lan,404/264-9546,processed,2020-06-09 17:59:01
+916,nthony,109 piedmont rd.  just south of peachtree rd,lan,404/262-7379,processed,2022-10-19 01:50:12
+917,atlanta fish market,65 pharr rd,lan,404/262-3165,processed,2020-08-13 04:23:10
+918,beesleys of buckhead,60 e. paces ferry roa,lan,404/264-1334,processed,2021-03-22 06:48:10
+919,bertolinis,500 peachtree rd.  phipps plaz,lan,404/233-2333,processed,2022-08-04 00:45:06
+920,istang,100 peachtree st,lan,404/724-0901,processed,2019-11-25 14:02:58
+921,cafe renaissance,050 jimmy carter blvd.  norcros,lan,770/441--0291,processed,2019-09-03 21:23:02
+922,camilles,186 n. highland ave,lan,404/872-7203,processed,2019-03-02 16:45:58
+923,assi,300 peachtree rd.  grand hyat,lan,404/365-8100,processed,2015-08-30 08:32:05
+924,city grill,0 hurt plaz,lan,404/524-2489,processed,2022-11-10 17:48:16
+925,coco loco,0  buckhead crossing mall on the sidney marcus blvd,lan,404/364-0212,processed,2015-08-21 04:48:37
+926,colonnade restaurant,879 cheshire bridge rd,lan,404/874-5642,processed,2018-11-19 21:55:22
+927,dantes down the hatch  buckhead,380 peachtree rd,lan,404/266-1600,processed,2024-02-05 10:26:16
+928,dantes down the hatch,nderground underground mall  underground atlant,lan,404/577-1800,processed,2018-09-13 04:13:08
+929,fat matts rib shack,811 piedmont ave.  near cheshire bridge rd,lan,404/607-1622,processed,2018-05-31 20:52:01
+930,french quarter food shop,23 peachtree st.  at 8th st,lan,404/875-2489,processed,2021-09-09 11:17:04
+931,holt bros. bar-b-q,359 jimmy carter blvd.  at buford hwy.  norcros,lan,770/242-3984,processed,2022-04-09 06:46:17
+932,horseradish grill,320 powers ferry rd,lan,404/255-7277,processed,2018-11-28 06:36:16
+933,hsus gourmet,92 peachtree center ave.  at international blvd,lan,404/659-2788,processed,2021-01-18 04:28:40
+934,imperial fez,285 peachtree rd.  peachtree battle condominiu,lan,404/351-0870,processed,2018-06-21 22:08:14
+935,amogaw,300 peachtree rd.  grand hyat,lan,404/841-0314,processed,2018-03-07 11:49:27
+936,la grotta at ravinia dunwoody rd.,oliday inn/crowne plaza at ravinia  dunwood,lan,770/395-9925,processed,2022-02-02 04:52:31
+937,little szechuan, buford hwy.  northwoods plaza  doravill,lan,770/451-0192,processed,2016-11-08 08:35:36
+938,lowcountry barbecue,301 roswell rd.  sandy springs plaza  sandy spring,lan,404/255-5160,processed,2021-12-17 17:40:02
+939,luna si,931 peachtree rd,lan,404/355-5993,processed,2019-06-20 13:12:10
+940,mambo restaurante cubano,402 n. highland ave,lan,404/874-2626,processed,2021-09-27 19:30:49
+941,mckinnons louisiane,209 maple dr,lan,404/237-1313,processed,2018-11-30 03:23:33
+942,mi spia dunwoody rd.,ark place  across from perimeter mall  dunwood,lan,770/393-1333,processed,2016-05-01 02:49:23
+943,nickiemotos: a sushi bar,47 buckhead ave.  east village sq,lan,404/842-0334,processed,2016-01-24 18:21:53
+944,alisade,829 peachtree rd,lan,404/350-6755,processed,2018-08-03 12:15:56
+945,pleasant peasant,55 peachtree st.  at linden ave,lan,404/874-3223,processed,2023-04-22 02:52:52
+946,ricc,00 pharr rd,lan,404/237-2941,processed,2023-10-23 20:09:29
+947,r.j.s uptown kitchen & wine bar,70 n. highland ave,lan,404/875-7775,processed,2018-08-15 08:14:21
+948,rib ranch,5 irby ave,lan,404/233-7644,processed,2023-02-19 18:59:09
+949,sa tsu ki,043 buford hwy,lan,404/325-5285,processed,2017-04-06 10:54:46
+950,sato sushi and thai,050 peachtree pkwy.  norcros,lan,770/449-0033,processed,2022-11-20 02:28:03
+951,south city kitchen,144 crescent ave,lan,404/873-7358,processed,2019-03-20 10:57:01
+952,south of france,345 cheshire bridge rd,lan,404/325-6963,processed,2021-05-26 23:08:47
+953,stringers fish camp and oyster bar,384 shallowford rd.  chamble,lan,770/458-7145,processed,2022-11-30 03:34:31
+954,sundown cafe,165 cheshire bridge rd,lan,404/321-1118,processed,2015-02-22 15:16:45
+955,taste of new orleans,89 w. peachtree st,lan,404/874-5535,processed,2018-02-17 21:51:28
+956,omto,393 peachtree rd,lan,404/264-1163,processed,2016-05-31 04:40:57
+957,antonios,700 w. flaming,as vega,702/252-7737,processed,2022-06-23 22:35:09
+958,ballys big kitchen,645 las vegas blvd. ,as vega,702/739-4111,processed,2016-01-23 20:43:17
+959,bamboo garden,850 flamingo rd,as vega,702/871-3262,processed,2020-12-16 13:23:50
+960,battistas hole in the wall,041 audrie st. at flamingo rd,as vega,702/732-1424,processed,2017-04-12 22:44:24
+961,bertolinis,570 las vegas blvd. ,as vega,702/735-4663,processed,2023-05-17 08:36:34
+962,binions coffee shop,28 fremont st,as vega,702/382-1600,processed,2015-12-08 00:38:40
+963,istr,400 las vegas blvd. ,as vega,702/791-7111,processed,2017-08-04 01:24:58
+964,roile,111 boulder hwy,as vega,702/432-7777,processed,2019-06-20 06:12:46
+965,bugsys diner,555 las vegas blvd. ,as vega,702/733-3111,processed,2020-02-20 10:06:37
+966,cafe michelle,350 e. flamingo rd,as vega,702/735-8686,processed,2016-08-09 16:01:30
+967,cafe roma,570 las vegas blvd. ,as vega,702/731-7547,processed,2023-01-13 16:33:14
+968,capozzolis,333 s. maryland pkwy,as vega,702/731-5311,processed,2024-02-14 05:05:20
+969,carnival world,700 w. flamingo rd,as vega,702/252-7777,processed,2017-12-12 14:36:32
+970,center stage plaza hotel, main st,as vega,702/386-2512,processed,2019-03-13 14:15:52
+971,circus circus,880 las vegas blvd. ,as vega,702/734-0410,processed,2019-01-23 05:12:32
+972,empress court,570 las vegas blvd. ,as vega,702/731-7888,processed,2018-10-22 17:59:00
+973,eas,411 w. sahara ave,as vega,702/367-2411,processed,2015-09-04 23:50:39
+974,golden nugget hotel,29 e. fremont st,as vega,702/385-7111,processed,2019-11-03 09:57:21
+975,golden steer,08 w. sahara ave,as vega,702/384-4470,processed,2017-07-27 22:16:21
+976,lillie langtrys,29 e. fremont st,as vega,702/385-7111,processed,2023-11-03 13:07:43
+977,mandarin court,510 e. flamingo rd,as vega,702/737-1234,processed,2018-11-03 22:27:34
+978,margaritas mexican cantina,120 las vegas blvd. ,as vega,702/794-8200,processed,2019-09-12 16:05:02
+979,marys diner,111 w. boulder hwy,as vega,702/454-8073,processed,2020-09-27 03:14:56
+980,ikad,400 las vegas blvd. ,as vega,702/791-7111,processed,2018-03-25 17:25:26
+981,amplemouss,00 e. sahara ave,as vega,702/733-2066,processed,2015-08-11 10:56:42
+982,ralphs diner,000 las vegas blvd. ,as vega,702/732-6330,processed,2022-04-18 22:51:16
+983,the bacchanal,570 las vegas blvd. ,as vega,702/731-7525,processed,2020-03-08 03:30:00
+984,enetia,713 w. sahara ave,as vega,702/876-4190,processed,2021-03-08 05:08:42
+985,viva mercados,182 w. flamingo rd,as vega,702/871-8826,processed,2015-12-19 13:35:26
+986,yolies,900 paradise rd,as vega,702/794-0700,processed,2023-06-27 05:54:43
+987,22,223 market st,an francisc,415/431-0692,processed,2015-10-31 11:29:16
+988,cquarell,722 sacramento st,an francisc,415/567-5432,processed,2022-05-07 12:50:43
+989,bardellis,43 ofarrell st,an francisc,415/982-0243,processed,2024-01-31 23:06:51
+990,etelnu,030 union st,an francisc,415/929-8855,processed,2020-04-07 19:07:37
+991,bistro roti,55 steuart st,an francisc,415/495-6500,processed,2023-01-23 07:49:35
+992,i,6 gold st,an francisc,415/433-6300,processed,2017-09-21 15:59:50
+993,izo,98 fourth st,an francisc,415/543-2222,processed,2023-04-16 02:21:39
+994,buca giovanni,00 greenwich st,an francisc,415/776-7766,processed,2020-03-10 22:19:01
+995,cafe adriano,347 fillmore st,an francisc,415/474-4180,processed,2016-09-05 16:15:05
+996,cafe marimba,317 chestnut st,an francisc,415/776-1506,processed,2015-04-08 13:58:36
+997,california culinary academy,25 polk st,an francisc,415/771-3500,processed,2024-03-19 01:33:32
+998,capps corner,600 powell st,an francisc,415/989-2589,processed,2017-03-28 22:30:04
+999,art,772 market st,an francisc,415/863-3516,processed,2021-11-24 12:32:17
+1000,hevy,th and howard sts,an francisc,415/543-8060,processed,2020-10-07 13:43:39
+1001,cypress club,00 jackson st,an francisc,415/296-8555,processed,2015-10-25 18:33:02
+1002,des alpes,32 broadwa,an francisc,415/788-9900,processed,2019-12-14 21:58:01
+1003,a,61 sutter st,an francisc,415/362-0404,processed,2022-08-27 22:21:10
+1004,fog city diner,300 battery st,an francisc,415/982-2000,processed,2022-11-10 04:04:30
+1005,garden court,arket and new montgomery sts,an francisc,415/546-5011,processed,2020-04-01 02:38:35
+1006,gaylords,hirardelli sq,an francisc,415/771-8822,processed,2024-03-29 12:35:32
+1007,grand cafe hotel monaco,01 geary st,an francisc,415/292-0101,processed,2023-05-18 22:38:50
+1008,reen,ldg. a fort maso,an francisc,415/771-6222,processed,2016-04-25 01:18:11
+1009,harbor village, embarcadero cente,an francisc,415/781-8833,processed,2020-10-21 02:49:47
+1010,harris,100 van ness ave,an francisc,415/673-1888,processed,2017-11-21 15:49:21
+1011,harry dentons,61 steuart st,an francisc,415/882-1333,processed,2016-03-19 08:22:15
+1012,hayes street grill,20 hayes st,an francisc,415/863-5545,processed,2019-07-08 16:41:13
+1013,elman,30 broadwa,an francisc,415/362-0641,processed,2018-12-31 00:39:11
+1014,hong kong flower lounge,322 geary blvd,an francisc,415/668-8998,processed,2020-01-15 04:06:47
+1015,hong kong villa,332 clement st,an francisc,415/752-8833,processed,2022-04-08 19:38:53
+1016,hyde street bistro,521 hyde st,an francisc,415/441-7778,processed,2016-07-01 17:11:03
+1017,il fornaio levis plaza,265 battery st,an francisc,415/986-0100,processed,2021-12-27 04:30:16
+1018,izzys steak & chop house,345 steiner st,an francisc,415/563-0487,processed,2021-01-31 22:38:22
+1019,jacks,15 sacramento st,an francisc,415/986-9854,processed,2016-10-19 09:04:17
+1020,kabuto sushi,116 geary blvd,an francisc,415/752-5652,processed,2019-12-28 07:49:17
+1021,katias,00 5th ave,an francisc,415/668-9292,processed,2021-05-17 19:02:36
+1022,kuletos,21 powell st,an francisc,415/397-7720,processed,2017-12-08 14:49:01
+1023,kyo-ya. sheraton palace hotel, new montgomery st.  at market st,an francisc,415/546-5000,processed,2020-10-13 19:26:56
+1024,losteria del forno,19 columbus ave,an francisc,415/982-1124,processed,2015-04-14 19:34:26
+1025,le central,53 bush st,an francisc,415/391-2233,processed,2018-06-08 22:01:23
+1026,le soleil,33 clement st,an francisc,415/668-4848,processed,2021-04-16 19:23:28
+1027,macarthur park,07 front st,an francisc,415/398-5700,processed,2019-10-08 02:08:01
+1028,anor,226 mission st,an francisc,415/861-6224,processed,2023-07-01 01:59:12
+1029,aykade,70 green st,an francisc,415/362-8286,processed,2023-05-10 12:19:21
+1030,mccormick & kuletos,hirardelli sq,an francisc,415/929-1730,processed,2023-04-10 08:43:27
+1031,illenniu,46 mcallister st,an francisc,415/487-9800,processed,2019-12-23 05:40:55
+1032,mooses,652 stockton st,an francisc,415/989-7800,processed,2016-11-11 13:37:42
+1033,north india,131 webster st,an francisc,415/931-1556,processed,2016-08-06 19:25:05
+1034,one market, market st,an francisc,415/777-5577,processed,2016-11-18 17:46:36
+1035,ritali,915 fillmore st,an francisc,415/346-1333,processed,2016-07-21 17:14:04
+1036,pacific pan pacific hotel,00 post st,an francisc,415/929-2087,processed,2018-06-16 01:44:48
+1037,palio dasti,40 sacramento st,an francisc,415/395-9800,processed,2017-12-18 22:25:00
+1038,pane e vino,011 steiner st,an francisc,415/346-2111,processed,2016-02-20 18:58:58
+1039,asti,015 battery st,an francisc,415/391-2555,processed,2020-07-30 13:23:18
+1040,perrys,944 union st,an francisc,415/922-9022,processed,2021-04-06 11:24:28
+1041,r&g lounge,31 b kearny st,an francisc,415/982-7877,processed,2021-06-04 19:47:30
+1042,ubico,58 sacramento st,an francisc,415/434-4100,processed,2021-08-31 06:56:09
+1043,umpu, tillman pl,an francisc,415/421-2300,processed,2016-07-22 02:29:42
+1044,anpp,702 post st,an francisc,415/346-3486,processed,2015-09-01 04:15:42
+1045,scalas bistro,32 powell st,an francisc,415/395-8555,processed,2022-05-11 01:57:30
+1046,south park cafe,08 south par,an francisc,415/495-7275,processed,2017-10-13 03:01:16
+1047,splendido embarcadero,,an francisc,415/986-3222,processed,2017-12-12 00:52:28
+1048,tar,50 redwood alle,an francisc,415/861-7827,processed,2024-04-29 21:26:44
+1049,stars cafe,00 van ness ave,an francisc,415/861-4344,processed,2020-08-29 20:54:52
+1050,stoyanofs cafe,240 9th ave,an francisc,415/664-3664,processed,2023-02-24 23:16:21
+1051,straits cafe,300 geary blvd,an francisc,415/668-1783,processed,2021-09-19 12:21:21
+1052,uppenkuch,01 hayes st,an francisc,415/252-9289,processed,2020-08-25 18:00:49
+1053,tadich grill,40 california st,an francisc,415/391-2373,processed,2019-06-15 12:15:38
+1054,the heights,235 sacramento st,an francisc,415/474-8890,processed,2018-05-20 14:50:24
+1055,hepi,98 gough st,an francisc,415/863-9335,processed,2021-07-20 13:49:00
+1056,ton kiang,148 geary blvd,an francisc,415/752-4440,processed,2022-04-04 11:12:59
+1057,ertig,00 montgomery st,an francisc,415/433-7250,processed,2017-07-15 18:14:20
+1058,vivande porta via,125 fillmore st,an francisc,415/346-4430,processed,2021-03-04 16:01:57
+1059,vivande ristorante,70 golden gate ave,an francisc,415/673-9245,processed,2015-08-22 23:44:01
+1060,world wrapps,257 chestnut st,an francisc,415/563-9727,processed,2023-03-13 10:31:44
+1061,wu kong,01 spear st,an francisc,415/957-9300,processed,2015-12-22 03:00:25
+1062,yank sing,27 battery st,an francisc,415/541-4949,processed,2015-01-30 02:14:53
+1063,yaya cuisine,220 9th ave,an francisc,415/566-6966,processed,2016-12-01 12:48:21
+1064,yoyo tsumami bistro,611 post st,an francisc,415/922-7788,processed,2016-01-31 13:01:57
+1065,arzuel,000 hyde st,an francisc,415/346-0800,processed,2024-04-10 01:13:14
+1066,zuni cafe & grill,658 market st,an francisc,415/552-2522,processed,2016-11-05 02:16:59

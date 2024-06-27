@@ -14,6 +14,13 @@ export const useGetData = () => {
           city: 'Singapore',
           phone: '+65 12345678',
         },
+        {
+          id: 'DBCA',
+          name: 'B. Bardvark',
+          address: '2 Fusionopolis Way',
+          city: 'Singapore',
+          phone: '+65 87654321',
+        },
       ];
     },
   });

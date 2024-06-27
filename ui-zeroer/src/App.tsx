@@ -1,15 +1,15 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-
-import { AddUserForm } from './AddUser';
-import DataSection from './components/sections/DataSection';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { useEffect, useState } from 'react';
+
+import { MainSection } from '@/components/sections/main';
+import { DataSection } from '@/components/sections/data';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 const SECTIONS = [
   {
     value: 'main',
     triggerText: 'Add new user',
-    component: <AddUserForm />,
+    component: <MainSection />,
   },
   {
     value: 'data',
@@ -17,6 +17,8 @@ const SECTIONS = [
     component: <DataSection />,
   },
 ];
+
+const urlParamKey = 'view';
 
 const queryClient = new QueryClient();
 
@@ -26,11 +28,9 @@ function App() {
   useEffect(() => {
     if (window) {
       const params = new URLSearchParams(window.location?.search);
-      if (params?.get('view')) {
-        const route = params.get('view')!;
-        if (SECTIONS.map((v) => v.value).includes(route)) {
-          setRouteState(route);
-        }
+      const route = params?.get(urlParamKey);
+      if (route && SECTIONS.map((v) => v.value).includes(route)) {
+        setRouteState(route);
       }
     }
   }, []);

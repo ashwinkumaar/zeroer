@@ -62,7 +62,9 @@ export function AddUserForm() {
             )}
           />
         ))}
-        <Button type='submit'>Add user</Button>
+        <Button className='' type='submit'>
+          Add user
+        </Button>
       </form>
     </Form>
   );

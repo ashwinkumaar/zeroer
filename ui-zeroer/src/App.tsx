@@ -1,4 +1,5 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useEffect, useState } from 'react';
 
 import { MainSection } from '@/components/sections/main';
@@ -58,6 +59,7 @@ function App() {
           ))}
         </Tabs>
       </div>
+      <ReactQueryDevtools />
     </QueryClientProvider>
   );
 }

@@ -1,4 +1,6 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
+import { DataTable } from '../ui/data-table';
+import { dataColumns } from './data/columns';
 
 export default function DataSection() {
   return (
@@ -7,7 +9,9 @@ export default function DataSection() {
         <CardTitle>Data</CardTitle>
         <CardDescription></CardDescription>
       </CardHeader>
-      <CardContent className='space-y-2'></CardContent>
+      <CardContent className='space-y-2'>
+        <DataTable columns={dataColumns} data={[]} />
+      </CardContent>
       <CardFooter></CardFooter>
     </Card>
   );

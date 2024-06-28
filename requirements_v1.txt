@@ -1,0 +1,6 @@
+mysqlclient
+numpy
+pandas
+pika
+sqlalchemy
+# contextlib

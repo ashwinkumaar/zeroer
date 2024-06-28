@@ -1,6 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
-
+import { UserIcon, PhoneIcon, HashtagIcon, MapIcon } from '@heroicons/react/solid';
 import { Button } from '@/components/ui/button';
 import {
   Form,
@@ -20,6 +20,7 @@ import {
   placeholders,
 } from './schema';
 import { cn } from '@/lib/utils';
+import { Building2Icon } from 'lucide-react';
 
 type AddUserFormProps = {
   postToBackend: TAPIMutFunc;
@@ -55,12 +56,16 @@ export function AddUserForm({ postToBackend }: AddUserFormProps) {
             render={({ field }) => (
               <FormItem className='grid gap-1'>
                 <div className='mb-4 grid grid-cols-8 gap-2'>
-                  <FormLabel className='col-span-1 content-center'>
+                  <FormLabel className='relative col-span-1 grid grid-cols-2 content-center'>
+                    {key === 'id' && <HashtagIcon className='mr-2 size-5 text-purple-500' />}
+                    {key === 'name' && <UserIcon className='mr-2 size-5 text-purple-500' />}
+                    {key === 'address' && <MapIcon className='mr-2 size-5 text-purple-500' />}
+                    {key === 'city' && <Building2Icon className='mr-2 size-5 text-purple-500' />}
+                    {key === 'phone' && <PhoneIcon className='mr-2 size-5 text-purple-500' />}
                     {key.charAt(0).toUpperCase() + key.slice(1)}
                   </FormLabel>
-
                   <FormControl>
-                    <div className='relative col-span-7'>
+                    <div className='relative col-span-6'>
                       <Input
                         className={cn(
                           form.getFieldState(key as TFormKey).error &&

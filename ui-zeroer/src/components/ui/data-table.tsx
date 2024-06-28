@@ -96,7 +96,6 @@ export function DataTable<TData, TValue>({
             className='max-w-sm'
           />
         )}
-        <DataTableViewOptions table={table} />
       </div>
       <div className='rounded-md border'>
         <Table>

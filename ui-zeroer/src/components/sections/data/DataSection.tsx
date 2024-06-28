@@ -21,7 +21,7 @@ export function DataSection() {
   return (
     <Card>
       <CardHeader className='flex flex-row'>
-        <div className='flex grow flex-col'>
+        <div className='flex grow flex-col gap-4'>
           <CardTitle>Data</CardTitle>
           <CardDescription>
             View the closest matching users from the existing databases

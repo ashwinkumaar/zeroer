@@ -36,12 +36,12 @@ export const TableFilter: FC<TableFilterProps> = ({ table: _table }) => {
   return (
     <div className='flex w-full grow flex-col gap-2 rounded-md border p-3 shadow-sm'>
       <div className='flex px-2'>
-        <span className='text-sm font-medium'>Search for entities matching a user:</span>
+        <span className='text-sm font-medium'>Search for entities matching a client:</span>
       </div>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className='flex grow flex-row place-items-end justify-between gap-4 rounded-md border p-3 shadow-sm'
+          className='flex grow flex-row place-items-end justify-between gap-4 rounded-md p-3 shadow-sm'
         >
           {Object.keys(filterSchema.shape).map((key) => (
             <FormField

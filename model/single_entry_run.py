@@ -28,6 +28,12 @@ def single_entry_run(data_backend=""):
     last_row_id = ltable_raw_df["id"].max()
     
     if data_backend:
+            data_backend.setdefault('name', 'hotel bel-air')
+            data_backend.setdefault('addr', '701 stone canyon rd.')
+            data_backend.setdefault('city', 'bel air')
+            data_backend.setdefault('phone', '310/472-1211')
+            data_backend.setdefault('type', 'californian')
+            data_backend.setdefault('class', 2)
             data = [last_row_id+1, data_backend.name, data_backend.addr, data_backend.city, data_backend.phone, data_backend.type, data_backend.class_]
     else:    
         data = [last_row_id+1, 'hotel bel-air','701 stone canyon rd.','bel air','310/472-1211','californian',2]

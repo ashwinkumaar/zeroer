@@ -27,6 +27,8 @@ class UserService:
             query = db.session.query(User)
 
         res = query.all()
+        if not res or len(res) < 1:
+            return None
         final_result = res[0]
         print("this is result", final_result)
         return final_result

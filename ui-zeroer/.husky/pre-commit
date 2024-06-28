@@ -1,4 +1,13 @@
 #!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+
+cd ui-zeroer
+
+path="$(dirname $0)"
+folder="$(awk -F'/' '{print $(NF)}' <<< $path)"
+
+. "$folder/_/husky.sh"
+
+unset path
+unset folder
 
 npx lint-staged

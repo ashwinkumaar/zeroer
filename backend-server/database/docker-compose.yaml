@@ -1,8 +1,6 @@
 version: '1'
 name: zeroer
 
-volumes:
-  users_db_data: {}
 services:
   db:
     image: mysql:latest
@@ -14,8 +12,6 @@ services:
       MYSQL_PASSWORD: secret
     ports:
       - "3306:3306"
-    volumes:
-      - users_db_data:/var/lib/mysql
     networks:
       - zeroer_docker
 

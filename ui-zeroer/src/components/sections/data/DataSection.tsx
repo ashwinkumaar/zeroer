@@ -10,19 +10,26 @@ import { DataTable } from '@/components/ui/data-table';
 
 import { dataColumns } from './columns';
 import { useGetData } from './data';
+import { TableFilter } from './TableFilter';
 
 export function DataSection() {
-  const { data } = useGetData();
+  const { data, isLoading, filterFields } = useGetData();
   return (
     <Card>
       <CardHeader>
         <CardTitle>Data</CardTitle>
-        <CardDescription></CardDescription>
+        <CardDescription>View the existing entities in the dataset.</CardDescription>
       </CardHeader>
       <CardContent className='space-y-2'>
-        <DataTable columns={dataColumns} data={data ?? []} />
+        <DataTable
+          columns={dataColumns}
+          data={data ?? []}
+          isLoading={isLoading}
+          filterState={filterFields}
+          customFilterComponent={TableFilter}
+        />
       </CardContent>
-      <CardFooter></CardFooter>
+      <CardFooter />
     </Card>
   );
 }

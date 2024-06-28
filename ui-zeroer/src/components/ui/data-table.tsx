@@ -27,7 +27,13 @@ import {
 } from './dropdown-menu';
 import { Input } from './input';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './table';
-import { ArrowDownIcon, ArrowUpIcon, ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
+import {
+  ArrowDownIcon,
+  ArrowUpIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+  Loader2,
+} from 'lucide-react';
 import {
   CaretSortIcon,
   DoubleArrowLeftIcon,
@@ -40,11 +46,20 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
   data: TData[];
+  filterState?: ColumnFiltersState;
+  isLoading?: boolean;
+  customFilterComponent?: React.FC<{ table: TTable<TData> }>;
 }
 
-export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData, TValue>) {
+export function DataTable<TData, TValue>({
+  columns,
+  data,
+  filterState,
+  isLoading,
+  customFilterComponent: CustomFilterComponent,
+}: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = React.useState<SortingState>([]);
-  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>([]);
+  const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(filterState ?? []);
   const [columnVisibility, setColumnVisibility] = React.useState<VisibilityState>({});
   const [rowSelection, setRowSelection] = React.useState({});
 
@@ -70,12 +85,17 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
   return (
     <div className='flex flex-col'>
       <div className='flex items-center py-4'>
-        <Input
-          placeholder='Filter names...'
-          value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
-          onChange={(event) => table.getColumn('name')?.setFilterValue(event.target.value)}
-          className='max-w-sm'
-        />
+        {CustomFilterComponent ? (
+          <CustomFilterComponent table={table} />
+        ) : (
+          <Input
+            disabled={isLoading}
+            placeholder='Filter names...'
+            value={(table.getColumn('name')?.getFilterValue() as string) ?? ''}
+            onChange={(event) => table.getColumn('name')?.setFilterValue(event.target.value)}
+            className='max-w-sm'
+          />
+        )}
         <DataTableViewOptions table={table} />
       </div>
       <div className='rounded-md border'>
@@ -109,7 +129,16 @@ export function DataTable<TData, TValue>({ columns, data }: DataTableProps<TData
             ) : (
               <TableRow>
                 <TableCell colSpan={columns.length} className='h-24 text-center'>
-                  No results.
+                  {isLoading ? (
+                    <div className='grid w-full place-content-center'>
+                      <div className='flex grow-0 flex-row items-center gap-2'>
+                        <Loader2 className='size-5 animate-spin' />
+                        <span>Fetching data...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <span>No results.</span>
+                  )}
                 </TableCell>
               </TableRow>
             )}

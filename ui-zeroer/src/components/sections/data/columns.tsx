@@ -13,12 +13,12 @@ import {
 import { Checkbox } from '@/components/ui/checkbox';
 import { DataTableColumnHeader } from '@/components/ui/data-table';
 
+export const DATA_FIELDS = ['id', 'name', 'address', 'city', 'phone'] as const;
+
+export type DataTypeKey = (typeof DATA_FIELDS)[number];
+
 export type DataType = {
-  id: string;
-  name: string;
-  address: string;
-  city: string;
-  phone: string;
+  [k in DataTypeKey]: string;
 };
 
 export const dataColumns: ColumnDef<DataType>[] = [
@@ -48,12 +48,14 @@ export const dataColumns: ColumnDef<DataType>[] = [
     header: ({ column }) => {
       return <DataTableColumnHeader column={column} title='ID' />;
     },
+    enableHiding: false,
   },
   {
     accessorKey: 'name',
     header: ({ column }) => {
       return <DataTableColumnHeader column={column} title='Name' />;
     },
+    enableHiding: false,
   },
   {
     accessorKey: 'address',
@@ -71,7 +73,6 @@ export const dataColumns: ColumnDef<DataType>[] = [
     id: 'actions',
     cell: ({ row }) => {
       const { id } = row.original;
-
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -86,8 +87,8 @@ export const dataColumns: ColumnDef<DataType>[] = [
               Copy row ID
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem>View row</DropdownMenuItem>
-            <DropdownMenuItem>View row details</DropdownMenuItem>
+            <DropdownMenuItem disabled>View row</DropdownMenuItem>
+            <DropdownMenuItem disabled>View row details</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

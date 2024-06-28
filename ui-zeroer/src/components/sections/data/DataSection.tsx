@@ -24,7 +24,7 @@ export function DataSection() {
         <div className='flex grow flex-col gap-4'>
           <CardTitle>Data</CardTitle>
           <CardDescription>
-            View the closest matching users from the existing databases
+            View the closest matching clients from the existing databases
           </CardDescription>
         </div>
         <Button onClick={() => setIsTable(!isTable)}>

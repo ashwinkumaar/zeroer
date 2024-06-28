@@ -60,7 +60,7 @@ export function MainSection() {
     <div className='flex flex-row gap-6'>
       <Card className='w-full p-0'>
         <CardHeader className='px-6 pt-6'>
-          <CardTitle className='mx-6'>Please fill in your client details and submit</CardTitle>
+          <CardTitle className='mx-6'>Please fill in client details and submit</CardTitle>
         </CardHeader>
         <CardContent className=''>
           <AddUserForm {...{ postToBackend, error, isPending, isSuccess }} />

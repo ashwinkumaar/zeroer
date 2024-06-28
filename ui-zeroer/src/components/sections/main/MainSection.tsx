@@ -6,8 +6,10 @@ import { Loader2 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { useEffect } from 'react';
+import { useToast } from '@/components/ui/use-toast';
 
 export function MainSection() {
+  const { toast } = useToast();
   const {
     mutate: postToBackend,
     reset: resetMutationState,
@@ -19,7 +21,7 @@ export function MainSection() {
     mutationFn: async (data: TFormData) => {
       const { id, name, address: addr, phone, city } = data;
       await new Promise((_resolve, _reject) => {
-        setTimeout(() => _resolve('Test'), 10000);
+        setTimeout(() => _resolve('Test'), 1000);
       });
       return await fetch('API Endpoint,,,,', {
         method: 'POST',
@@ -40,7 +42,15 @@ export function MainSection() {
   useEffect(() => {
     if (isSuccess) {
       // TODO: Toast success with link, delay navigate
-      window?.location?.assign(`/?view=data`);
+      toast({
+        variant: 'default',
+        title: 'Add User Success',
+        description: 'Success! Showing 5 nearest matches now',
+        duration: 2500,
+      });
+      setTimeout(() => {
+        window?.location?.assign(`/?view=data`);
+      }, 3000);
     }
   }, [isSuccess]);
 

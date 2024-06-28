@@ -2,9 +2,10 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { useEffect, useState } from 'react';
 
-import { MainSection } from '@/components/sections/main';
 import { DataSection } from '@/components/sections/data';
+import { MainSection } from '@/components/sections/main';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Toaster } from '@/components/ui/toaster';
 
 const SECTIONS = [
   {
@@ -58,6 +59,7 @@ function App() {
             </TabsContent>
           ))}
         </Tabs>
+        <Toaster />
       </div>
       <ReactQueryDevtools />
     </QueryClientProvider>

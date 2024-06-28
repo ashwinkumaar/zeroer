@@ -84,7 +84,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center py-4'>
+      <div className='flex items-start gap-4 py-4'>
         {CustomFilterComponent ? (
           <CustomFilterComponent table={table} />
         ) : (
@@ -271,9 +271,9 @@ export function DataTableViewOptions<TData>({ table }: DataTableViewOptionsProps
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant='outline' size='sm' className='ml-auto hidden h-8 lg:flex'>
+        <Button variant='outline' size='sm' className='ml-auto hidden h-10 grow lg:flex'>
           <MixerHorizontalIcon className='mr-2 size-4' />
-          View
+          <span>Filter view</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align='end' className='w-[150px]'>

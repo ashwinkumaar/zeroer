@@ -11,7 +11,13 @@ import {
   FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
-import { type TFormKey, formSchema, type TAPIMutFunc, type TFormData } from './schema';
+import {
+  type TFormKey,
+  formSchema,
+  type TAPIMutFunc,
+  type TFormData,
+  formDefaultValues,
+} from './schema';
 
 type AddUserFormProps = {
   postToBackend: TAPIMutFunc;
@@ -24,14 +30,7 @@ export function AddUserForm({ postToBackend }: AddUserFormProps) {
   // 1. Define your form.
   const form = useForm<TFormData>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      id: '',
-      name: '',
-      // balance: '',
-      address: '',
-      city: '',
-      phone: '',
-    },
+    defaultValues: formDefaultValues,
   });
 
   // 2. Define a submit handler.

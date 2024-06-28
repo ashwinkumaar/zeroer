@@ -10,6 +10,10 @@ class UserService:
         db.session.commit()
         return user
 
+    def retrieve_user_by_name(self, id:str):
+        res = db.session.execute(db.session.query(User.user_name).where(User.id == id)).scalars().all()
+        return res
+    
     def retrieve_user_by_records(self, name: str, address: str, city: str, phone: str):
         print("this is name", name)
         conditions = []

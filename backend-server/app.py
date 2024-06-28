@@ -116,14 +116,26 @@ def get_all_user_relationships():
             for neighbor in neighbor_list:
                 if neighbor not in visited:
                     queue.append(neighbor)
-                
-                
-    nodes = [{'id': node} for node in traversal_order]
+                    
+    retrieved_nodes = []
+    node_names = {}
+    for node in traversal_order:
+        retrieved_name = user_service.retrieve_user_by_name(node)
+        retrieved_nodes.append({'node': node, 'name': retrieved_name})
+        node_names[node] = retrieved_name
 
-    print("this is nodes,", nodes)
-    edges = [{'from': node, 'to': neighbor} for node in traversal_order for neighbor in adjacency_list["relationships"] if neighbor in traversal_order]
-
-
+    nodes = [{'name': retrieved_node['name']} for retrieved_node in retrieved_nodes]
+    #for each node, query the database for the user name 
+    edges = []
+    for node in traversal_order:
+        node_name = node_names[node]
+        rs = adjacency_list["relationships"]
+        print("this is rs", rs)
+        if node in rs:
+            for neighbor in rs:
+                if neighbor in traversal_order:
+                    neighbor_name = node_names[neighbor]
+                    edges.append({'from': node_name, 'to': neighbor_name})
     graph = {
         'nodes' : nodes,
         'edges' : edges

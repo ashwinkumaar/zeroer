@@ -18,6 +18,6 @@ COPY . ./
 RUN poetry config virtualenvs.create false \
   && poetry install --no-interaction --no-ansi
 
-EXPOSE 5000
+EXPOSE 5050
 
 CMD ["gunicorn", "--config", "gunicorn_config.py", "app:app"]

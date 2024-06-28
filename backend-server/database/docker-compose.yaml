@@ -5,20 +5,19 @@ volumes:
   users_db_data: {}
 services:
   db:
-      image: mysql:latest
-      container_name: db
-      environment:
-        MYSQL_DATABASE: zeroer
-        MYSQL_ROOT_USER: user
-        MYSQL_ROOT_PASSWORD: password
-        MYSQL_USER: zeroer
-        MYSQL_PASSWORD: secret
-      ports:
-        - "3306:3306"
-      volumes:
-        - users_db_data:/var/lib/mysql
-      networks:
-        - zeroer_docker
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: zeroer
+      MYSQL_ROOT_USER: user
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: zeroer
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - users_db_data:/var/lib/mysql
+    networks:
+      - zeroer_docker
 
   # backend:
   #   depends_on:

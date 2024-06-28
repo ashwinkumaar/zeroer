@@ -45,6 +45,9 @@ def blocking_for_citeseer_dblp(A,B):
 #fodors.csv and zagats.csv
 def block_fodors_zagats(A, B):
     ob = em.OverlapBlocker()
+    # tokenizes attributes of l and r and computes overlap
+    # Specify the overlap attributes with the l_output_attrs and r_output_attrs parameters
+    # overlap_size specifies the minimum number of tokens that should overlap
     C = ob.block_tables(A, B, 'name', 'name', l_output_attrs=['name', 'addr', 'city', 'phone'],  r_output_attrs=['name', 'addr', 'city', 'phone'],
         overlap_size=1, show_progress=False)
     return C

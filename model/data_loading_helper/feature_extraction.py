@@ -86,8 +86,11 @@ def get_features_for_type(column_type):
 
 
 def extract_features(ltable_df, rtable_df, candset_df):
+    # Tokenizer 
     tokenizers = em.get_tokenizers_for_matching()
+    # This function returns the similarity functions that can be used for matching purposes.
     sim_functions = em.get_sim_funs_for_matching()
+    # Get the attributes of the input tables
     left_attr_types = em.get_attr_types(ltable_df)
     right_attr_types = em.get_attr_types(rtable_df)
     correspondences = em.get_attr_corres(ltable_df, rtable_df)
@@ -100,7 +103,17 @@ def extract_features(ltable_df, rtable_df, candset_df):
                 left_attr_types[c[0]] = right_attr_types[c[1]]
             else:
                 right_attr_types[c[1]] = left_attr_types[c[0]]
+    
+    """
+    This function will automatically generate a set of features based on the
+    attributes of the input tables.
 
+    Specifically, this function will go through the attribute
+    correspondences between the input tables. For each correspondence ,
+    it examines the types of the involved attributes, then apply the
+    appropriate tokenizers and sim functions to generate all appropriate
+    features for this correspondence.
+    """
     feature_records = get_features(ltable_df,rtable_df,left_attr_types, right_attr_types, correspondences, tokenizers, sim_functions)
     #Remove all features based on id - they are often useless
     feature_records = feature_records[feature_records.left_attribute !='id']

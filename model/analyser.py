@@ -18,12 +18,31 @@ import pika
 
 
 # sys.path.append("../")
-import single_entry_run
+# import single_entry_run
 
+from data_loading_helper.data_loader import load_data
+from data_loading_helper.feature_extraction import *
+from utils import run_zeroer
+from blocking_functions import *
+from os.path import join
+import pandas as pd
+import numpy as np
+pd.options.mode.chained_assignment = None  # default='warn'
+from model import ZeroerModel
+import csv
+
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("dataset",type=str)
+parser.add_argument("--run_transitivity",type=bool,default=False,nargs="?",const=True, help="whether to enforce transitivity constraint")
+parser.add_argument("--LR_dup_free",type=bool,default=False,nargs="?",const=True, help="are the left table and right table duplicate-free?")
+parser.add_argument("--LR_identical",type=bool,default=False,nargs="?",const=True, help="are the left table and right table identical?")
+
+data_path = "datasets"
 
 sys.path.append("../")
 from consumer.extensions import init_mysql, open_rabbitmq_connection
-import consumer.model
+import consumer.model as model
 
 # # Load the db modesl
 # import models
@@ -71,9 +90,64 @@ logger.addHandler(handler)
 #         interps[idx] = normalise(interps[idx])
 #     return interps
 
-def run_model(data):
+def single_entry_run(data_backend):
+    # Load model from pickle file and use it to predict on a single entry
+    model = ZeroerModel.load_model("saved_models/fodors_zagats_model.pkl")
 
-    return ['13', '23', '10']
+    # get last row's id from fodors.csv
+    fodors_csv = "C:/Users/Xuan Ming/Desktop/repos/hackathons/zeroer/model/datasets/fodors_zagats/fodors.csv"
+    ltable_raw_df = pd.read_csv(fodors_csv)
+    last_row_id = ltable_raw_df["id"].max()
+    if data_backend:
+        data_backend.setdefault('id', 8000)
+        data_backend.setdefault('name', 'hotel bel-air')
+        data_backend.setdefault('addr', '701 stone canyon rd.')
+        data_backend.setdefault('city', 'bel air')
+        data_backend.setdefault('phone', '310/472-1211')
+        data_backend.setdefault('type', 'californian')
+        data_backend.setdefault('class', 2)
+        data = [data_backend["id"], data_backend["name"], data_backend["addr"], data_backend["city"], data_backend["phone"], data_backend["type"], data_backend["class"]]
+    else:    
+        data = [last_row_id+1, 'hotel bel-air','701 stone canyon rd.','bel air','310/472-1211','californian',2]
+    
+    # Enclose all strings in single quotes
+    data = [f"'{item}'" if isinstance(item, str) else item for item in data]
+
+    # Append the new entry to the fodors.csv file
+    with open(fodors_csv, 'a', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(data)
+    
+    # Load the data and generate features
+    ltable_df, rtable_df, duplicates_df, candset_df = load_data("C:/Users/Xuan Ming/Desktop/repos/hackathons/zeroer/model/datasets/fodors_zagats/fodors.csv", 
+                                                                "C:/Users/Xuan Ming/Desktop/repos/hackathons/zeroer/model/datasets/fodors_zagats/zagats.csv", "", blocking_functions_mapping["fodors_zagats"], include_self_join=False)
+    # If duplicates_df is None, create an empty DataFrame
+    if duplicates_df is None:
+        duplicates_df = pd.DataFrame(columns=["ltable_id", "rtable_id"])
+    
+    # Gather features and labels
+    candset_features_df = gather_features_and_labels(ltable_df, rtable_df, duplicates_df, candset_df)
+    similarity_features_df = gather_similarity_features(candset_features_df)
+    
+    # Use the predict_PM function on the single test entry
+    P_M = model.predict_PM(similarity_features_df)
+
+    pred_df = candset_features_df[["ltable_id","rtable_id"]]
+    pred_df['pred'] = P_M
+    if data_backend:
+        entries_with_newdata = pred_df.loc[pred_df['ltable_id'] == str(data_backend["id"])] 
+    else:
+        entries_with_newdata = pred_df.loc[pred_df['ltable_id'] == str(last_row_id+1)] 
+
+    entries_with_newdata = entries_with_newdata.loc[entries_with_newdata['pred'] == 1]
+    
+    mapped_id = entries_with_newdata["rtable_id"].values.astype(int) 
+    return mapped_id 
+    
+  
+def run_model(data):
+    return single_entry_run(data)
+    # return ['13', '23', '10']
 
 
 def main():
@@ -98,8 +172,9 @@ def main():
             try:
                 with init_mysql() as mysql:
                     data = json.loads(body)
+                    print(data)
 
-                    user_id = data["user_id"]
+                    # user_id = data["user_id"]
                     
                     # user = (
                     #     mysql.query(model.User)
@@ -108,21 +183,46 @@ def main():
                     # )   
                     # print(user)
 
-                    user = (
-                        mysql.query(model.User)
-                        .filter(model.User.id == user_id)
-                        .first()
-                    )   
-                    print(user)
-
+                    # user = (
+                    #     mysql.query(model.User)
+                    #     .filter(model.User.id == user_id)
+                    #     .first()
+                    # )   
+                    # print(user)
                     ###### Run model ###########
 
 
                     relationships = run_model(data)
                     ###########################
-
-                    relationship_str = json.dumps(relationships, default=int)
-
+                    # relationship_str = json.dumps(relationships, default=int)
+                    relationship_str = ", ".join(str(x) for x in relationships)
+                    
+                    
+                    
+                    # Get user
+                    user = (
+                        mysql.query(model.User)
+                        .filter(model.User.id == data["id"])
+                        .first()
+                    )   
+                    print(user)
+                    
+                    # Update status
+                    user.process_status = "processed"
+                    
+                    mysql.commit()
+                    
+                    new_relationship = model.Group(user_id=user.id, user_relationship=relationship_str)
+                    mysql.commit()
+                    # Add reslationship
+                    # for next_id in relationships:
+                    #     new_relationship = model.Group(user_id=user.id, user_relationship=)
+                    #     mysql.add(new_relationship)
+                    #     mysql.commit()
+                        
+                    
+                    
+                    
 
                     # user.process_status = "completed"
 
@@ -131,7 +231,7 @@ def main():
                     # mysql.commit()
 
             
-                print("Done", user_id, data, relationship_str)
+                print("Done",  data, relationship_str)
                 
                 # Reset
                 method_frame = None

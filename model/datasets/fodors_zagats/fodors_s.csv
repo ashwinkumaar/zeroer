@@ -1,0 +1,14 @@
+id,name,addr,city,phone,type,class
+534,'arnie morton\'s of chicago','435 s. la cienega blv.','los angeles',310/246-1501,american,0
+535,'art\'s delicatessen','12224 ventura blvd.','studio city',818/762-1221,american,1
+536,'hotel bel-air','701 stone canyon rd.','bel air',310/472-1211,californian,2
+537,'cafe bizou','14016 ventura blvd.','sherman oaks',818/788-3536,french,3
+538,campanile,'624 s. la brea ave.','los angeles',213/938-1447,american,4
+539,'chinois on main','2709 main st.','santa monica',310/392-9025,french,5
+540,citrus,'6703 melrose ave.','los angeles',213/857-0034,californian,6
+541,fenix,'8358 sunset blvd. west',hollywood,213/848-6677,american,7
+542,granita,'23725 w. malibu rd.',malibu,310/456-0488,californian,8
+543,'grill on the alley','9560 dayton way','los angeles',310/276-0615,american,9
+544,'restaurant katsu','1972 n. hillhurst ave.','los angeles',213/665-1891,asian,10
+545,'l\'orangerie','903 n. la cienega blvd.','los angeles',310/652-9770,french,11
+546,'le chardonnay','8284 melrose ave.','los angeles',213/655-8880,french,12

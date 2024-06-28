@@ -3,6 +3,9 @@ from data_loading_helper.feature_extraction import *
 from utils import run_zeroer
 from blocking_functions import *
 from os.path import join
+import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
+
 import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("dataset",type=str)
@@ -54,6 +57,10 @@ if __name__ == '__main__':
                                                                                               blocking_func,
                                                                                               include_self_join=True)
         else:
+            # l_table_df: the dataframe for the left table
+            # r_table_df: the dataframe for the right table
+            # duplicates_df: the dataframe for the ground truth matches
+            # candset_df: the dataframe for the 
             ltable_df, rtable_df, duplicates_df, candset_df = load_data(LEFT_FILE, RIGHT_FILE, DUPLICATE_TUPLES,
                                                                                               blocking_func,
                                                                                               include_self_join=False)
@@ -62,8 +69,10 @@ if __name__ == '__main__':
                 candset_df = candset_df.loc[candset_df.ltable_id!=candset_df.rtable_id,:]
                 candset_df.reset_index(inplace=True,drop=True)
                 candset_df['_id'] = candset_df.index
+        # if no duplicate df, creater an empty one
         if duplicates_df is None:
             duplicates_df = pd.DataFrame(columns=["ltable_id", "rtable_id"])
+        # if no candset df, create an empty one
         candset_features_df = gather_features_and_labels(ltable_df, rtable_df, duplicates_df, candset_df)
         candset_features_df.to_csv(join(dataset_path,"candset_features_df.csv"))
         id_df = candset_df[["ltable_id", "rtable_id"]]
@@ -87,6 +96,8 @@ if __name__ == '__main__':
             id_df_l.to_csv(join(dataset_path,"id_tuple_df_l.csv"))
             id_df_r.to_csv(join(dataset_path,"id_tuple_df_r.csv"))
 
+    
+    # Filter out bad features (non similarity, non distance, singular valued)
     similarity_features_df = gather_similarity_features(candset_features_df)
     similarity_features_lr = (None,None)
     id_dfs = (None, None, None)

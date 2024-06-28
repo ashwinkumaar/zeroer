@@ -202,6 +202,7 @@ class ZeroerModel:
     def free_energy(self):
         return self.P_M*(np.log(self.pi_M+DEL)-np.log(self.P_M+DEL)+self.Q_M)+self.P_U*(np.log(1-self.pi_M+DEL)-np.log(self.P_U+DEL)+self.Q_U)
 
+    
     def predict_PM(self,X_test):
         reg_cov = 1e-8 * np.identity(len(self.X[0]))
         self.Cov_M += reg_cov
@@ -474,6 +475,8 @@ class ZeroerModel:
                             f1, p, r))
                     pbar.set_description_str(result_str)
 
+        save_path = "model.pkl"
+        model.save_model(save_path)
         return model, model.P_M
 
 

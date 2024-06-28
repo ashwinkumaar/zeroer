@@ -11,8 +11,9 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { DataTableColumnHeader } from '@/components/ui/data-table';
+import { Badge } from '@/components/ui/badge';
 
-export const DATA_FIELDS = ['id', 'name', 'address', 'city', 'phone'] as const;
+export const DATA_FIELDS = ['id', 'name', 'address', 'city', 'phone', 'process_status'] as const;
 
 export type DataTypeKey = (typeof DATA_FIELDS)[number];
 
@@ -67,6 +68,11 @@ export const dataColumns: ColumnDef<DataType>[] = [
   {
     accessorKey: 'phone',
     header: 'Phone',
+  },
+  {
+    accessorKey: 'process_status',
+    header: 'Status',
+    cell: ({ row }) => <Badge>{row.getValue('process_status')}</Badge>,
   },
   {
     id: 'actions',

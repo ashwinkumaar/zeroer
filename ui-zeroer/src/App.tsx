@@ -10,7 +10,7 @@ import { Toaster } from '@/components/ui/toaster';
 const SECTIONS = [
   {
     value: 'main',
-    triggerText: 'Add new user',
+    triggerText: 'Add New Client',
     component: <MainSection />,
   },
   {

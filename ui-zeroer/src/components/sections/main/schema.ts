@@ -24,3 +24,11 @@ export const formDefaultValues: TFormData = {
   city: '',
   phone: '',
 };
+
+export const placeholders = {
+  id: 'S123',
+  name: 'John Doe',
+  address: '5 Park Avenue',
+  city: 'New York City',
+  phone: '812345678',
+};

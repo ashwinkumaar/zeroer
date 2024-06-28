@@ -65,7 +65,7 @@ export function AddUserForm({ postToBackend }: AddUserFormProps) {
                     {key.charAt(0).toUpperCase() + key.slice(1)}
                   </FormLabel>
                   <FormControl>
-                    <div className='relative col-span-6'>
+                    <div className='relative left-1 col-span-7'>
                       <Input
                         className={cn(
                           form.getFieldState(key as TFormKey).error &&

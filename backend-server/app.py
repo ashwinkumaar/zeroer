@@ -5,25 +5,21 @@ from controllers.controller import UserService
 from dto.response import ResponseBodyJSON
 from dto.exception import CustomException
 from sqlalchemy.exc import IntegrityError
+from collections import defaultdict, deque
+import json
 
 
-# from extensions import init_mysql, open_rabbitmq_connection
+from extensions import init_mysql, open_rabbitmq_connection
 
 
-# # Test RabbitMQ Connection
-# with open_rabbitmq_connection() as channel:
-#     method_frame, header_frame, body = channel.basic_get(
-#         queue="analyse-user-queue"
-#     )
+# Test RabbitMQ Connection
+with open_rabbitmq_connection() as channel:
+    method_frame, header_frame, body = channel.basic_get(
+        queue="analyse-user-queue"
+    )
 
 
 
-
-# # Test RabbitMQ Connection
-# with open_rabbitmq_connection() as channel:
-#     method_frame, header_frame, body = channel.basic_get(
-#         queue="analyse-user-queue"
-#     )
 
 
 @app.route("/welcome", methods=["GET"])
@@ -42,7 +38,6 @@ def get_users():
     if result is None:
         abort(404, description=f"User {name} not found.")
     data = result.json()
-    print("this is data", data)
     manipulated_data = {
         "id": data["id"],
         "name": data["name"],
@@ -65,16 +60,46 @@ def create_user():
         city = body.get("city")
         phone = body.get("phone")
         
-        existing_user = user_service.retrieve_user_by_name(name)
-        if existing_user:
-            abort(400, description=f"User with {name} already exists")
+        
+        # existing_user = user_service.retrieve_user_by_records(name, addr, city, phone)
+        # print(city)
+        # if existing_user:
+            # abort(400, description=f"User with {name} already exists")
         new_user = User()
         new_user.user_name = name
         new_user.user_address = addr
         new_user.user_city = city
         new_user.user_phone = phone
         new_user.process_status = "processing" 
-        data = user_service.create(user=new_user).json()
+        user_data = user_service.create(user=new_user)
+
+        # print(data)
+        # msg = {
+        #     "user"
+        # }
+        
+        data = {"id": user_data.id, "name": user_data.user_name, 
+                "addr": user_data.user_address, 
+                "city": user_data.user_city, 
+                "phone": user_data.user_phone}
+        # print("DATA", data)
+        msg_str = json.dumps(data)
+        # print("msg_str", msg_str)
+        # Push to MQ
+        try:
+            with open_rabbitmq_connection() as channel:
+                channel.basic_publish(
+                    exchange="amq.direct",
+                    routing_key="analyse-user",
+                    # body="abc",
+                    body=msg_str,
+                )
+                print("success rabbitmq")
+        except Exception as e:
+            print(e)
+            abort(400, description=f"RabbitMQ Error: {e}")
+
+
         response = ResponseBodyJSON(True, data).json()
         return jsonify(response), 201
     except IntegrityError as e:
@@ -86,12 +111,50 @@ def create_user():
 def get_all_user_relationships():
     app.logger.info("GET all permissions")
     user_service = UserService()
+    id = request.args.get("id")
     data = user_service.retrieve_user_relationships()
-    return_list = []
+    
+    return_list = []  # [{ id: id, relationships: [...]}]
     for id, relationship_strings in data:
         relationships = relationship_strings.split(', ')
         return_list.append({"id": id, "relationships": relationships})
-    response = ResponseBodyJSON(True, return_list).json()
+        
+    adjacency_list = {}  # id: 1 | relationships: []
+    for item in return_list:
+        for entry in item.items():
+            key, value = entry  # id, 1 | relationships: []
+            print(entry)
+            adjacency_list[key] = value
+        
+            
+        queue = deque([id])  # [id, id, id]
+        visited = set()  # { id, id , id}
+        traversal_order=[]
+        
+        while queue:
+            curr = queue.popleft()
+            if curr in visited:
+                continue
+            visited.add(curr)  # Mark current ID as visited
+            traversal_order.append(curr)  
+            
+            neighbor_list = adjacency_list['relationships']
+            for neighbor in neighbor_list:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+                
+                
+    nodes = [{'id': node} for node in traversal_order]
+
+    print("this is nodes,", nodes)
+    edges = [{'from': node, 'to': neighbor} for node in traversal_order for neighbor in adjacency_list["relationships"] if neighbor in traversal_order]
+
+
+    graph = {
+        'nodes' : nodes,
+        'edges' : edges
+    }
+    response = ResponseBodyJSON(True, graph).json()
     print("this is response", response)
     return jsonify(response), 200
 

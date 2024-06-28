@@ -3,7 +3,7 @@ import type { UseMutateFunction } from '@tanstack/react-query';
 import z from 'zod';
 
 export const formSchema = z.object({
-  id: z.string().regex(/^\d+$/, 'Please enter an integer ID containing only digits'),
+  // id: z.string().regex(/^\d+$/, 'Please enter an integer ID containing only digits'),
   name: z.string().min(3, 'Enter at least 3 characters'),
   address: z.string().min(3, 'Enter at least 3 characters'),
   city: z.string().min(3, 'Enter at least 3 characters'),
@@ -15,10 +15,10 @@ export type TFormKey = keyof typeof formSchema.shape;
 
 export type TFormData = z.infer<typeof formSchema>;
 
-export type TAPIMutFunc = UseMutateFunction<Response, Error, TFormData, unknown>;
+export type TAPIMutFunc = UseMutateFunction<void, Error, TFormData, unknown>;
 
 export const formDefaultValues: TFormData = {
-  id: '',
+  // id: '',
   name: '',
   address: '',
   city: '',
@@ -26,7 +26,7 @@ export const formDefaultValues: TFormData = {
 };
 
 export const placeholders = {
-  id: 'S123',
+  // id: 'S123',
   name: 'John Doe',
   address: '5 Park Avenue',
   city: 'New York City',

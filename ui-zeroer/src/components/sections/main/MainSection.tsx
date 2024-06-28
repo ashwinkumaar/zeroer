@@ -1,12 +1,12 @@
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { AddUserForm } from './AddUserForm';
 import { useMutation } from '@tanstack/react-query';
-import { TFormData } from './schema';
 import { Loader2 } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
 import { Button } from '@/components/ui/button';
-import { useEffect } from 'react';
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
+import { cn } from '@/lib/utils';
+import { AddUserForm } from './AddUserForm';
+import { TFormData } from './schema';
 
 export function MainSection() {
   const { toast } = useToast();
@@ -19,42 +19,38 @@ export function MainSection() {
     variables,
   } = useMutation({
     mutationFn: async (data: TFormData) => {
-      const { id, name, address: addr, phone, city } = data;
+      const { name, address: addr, phone, city } = data;
 
-      await new Promise((resolve, reject) => {
-        setTimeout(() => reject('An eroor occurred'), 2000);
-      });
-
-      return await fetch('API Endpoint,,,,', {
+      const response = await fetch('http://127.0.0.1:5000/user', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          id,
           name,
           addr,
           phone,
           city,
         }),
       });
+      if (response.ok) {
+        const { data } = await response.json();
+        if (data.name) {
+          toast({
+            variant: 'default',
+            title: 'Add User Success',
+            description: 'Success! Showing 5 nearest matches now',
+            duration: 2500,
+          });
+          setTimeout(() => {
+            window.location.assign(`/?view=data&name=${data.name}`);
+          }, 3000);
+        }
+      } else {
+        throw new Error(await response.text());
+      }
     },
   });
-
-  useEffect(() => {
-    if (isSuccess) {
-      // TODO: Toast success with link, delay navigate
-      toast({
-        variant: 'default',
-        title: 'Add User Success',
-        description: 'Success! Showing 5 nearest matches now',
-        duration: 2500,
-      });
-      setTimeout(() => {
-        window?.location?.assign(`/?view=data`);
-      }, 3000);
-    }
-  }, [isSuccess]);
 
   return (
     <div className='flex flex-row gap-6'>

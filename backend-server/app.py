@@ -65,7 +65,7 @@ def create_user():
         city = body.get("city")
         phone = body.get("phone")
         
-        existing_user = user_service.retrieve_user_by_name(name)
+        existing_user = user_service.retrieve_user_by_records(name, '', '', '')
         if existing_user:
             abort(400, description=f"User with {name} already exists")
         new_user = User()

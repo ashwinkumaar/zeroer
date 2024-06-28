@@ -2,7 +2,7 @@ import { TFormData, TFormKey, formDefaultValues } from '@/components/sections/ma
 import { z } from 'zod';
 
 export const filterSchema = z.object({
-  id: z.string().regex(/^\d*$/, 'Please enter an integer ID containing only digits'),
+  // id: z.string().regex(/^\d*$/, 'Please enter an integer ID containing only digits'),
   name: z.string(),
   address: z.string(),
   city: z.string(),

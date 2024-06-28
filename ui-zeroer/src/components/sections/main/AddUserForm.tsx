@@ -19,6 +19,7 @@ import {
   formDefaultValues,
   placeholders,
 } from './schema';
+import { cn } from '@/lib/utils';
 
 type AddUserFormProps = {
   postToBackend: TAPIMutFunc;
@@ -53,25 +54,30 @@ export function AddUserForm({ postToBackend }: AddUserFormProps) {
             name={key as TFormKey}
             render={({ field }) => (
               <FormItem className='grid gap-1'>
-                <div className='mb-4 grid grid-cols-6 gap-2'>
+                <div className='mb-4 grid grid-cols-8 gap-2'>
                   <FormLabel className='col-span-1 content-center'>
                     {key.charAt(0).toUpperCase() + key.slice(1)}
                   </FormLabel>
 
                   <FormControl>
-                    <Input
-                      className='col-span-5'
-                      {...field}
-                      placeholder={placeholders[key as keyof TFormData]}
-                    />
+                    <div className='relative col-span-7'>
+                      <Input
+                        className={cn(
+                          form.getFieldState(key as TFormKey).error &&
+                            'ring-1 ring-destructive focus-visible:ring-destructive'
+                        )}
+                        {...field}
+                        placeholder={placeholders[key as keyof TFormData]}
+                      />
+                      <FormMessage className='absolute -bottom-6 right-0' />
+                    </div>
                   </FormControl>
                 </div>
-                <FormMessage className='content-left' />
               </FormItem>
             )}
           />
         ))}
-        <Button className='' type='submit'>
+        <Button className='mx-auto w-1/2' type='submit'>
           Add Client
         </Button>
       </form>

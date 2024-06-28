@@ -20,9 +20,11 @@ export function MainSection() {
   } = useMutation({
     mutationFn: async (data: TFormData) => {
       const { id, name, address: addr, phone, city } = data;
-      await new Promise((_resolve, _reject) => {
-        setTimeout(() => _resolve('Test'), 1000);
+
+      await new Promise((resolve, reject) => {
+        setTimeout(() => reject('An eroor occurred'), 2000);
       });
+
       return await fetch('API Endpoint,,,,', {
         method: 'POST',
         headers: {
@@ -67,7 +69,7 @@ export function MainSection() {
           {(isPending || error) && (
             <div
               className={cn(
-                'rounded-lg p-3',
+                'mx-auto w-1/2 rounded-lg p-3',
                 isPending
                   ? 'bg-secondary text-secondary-foreground'
                   : 'bg-destructive text-destructive-foreground'
@@ -93,7 +95,7 @@ export function MainSection() {
                       Cancel
                     </Button>
                     <Button variant='secondary' onClick={() => postToBackend(variables)}>
-                      Try Again
+                      Retry request
                     </Button>
                   </div>
                 </div>

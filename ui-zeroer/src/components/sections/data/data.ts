@@ -8,6 +8,9 @@ export const useGetData = () => {
   const [filterState, setFilterState] = useState<ColumnFiltersState>([]);
 
   useEffect(() => {
+    if (filterState) {
+      return;
+    }
     const params = new URLSearchParams(window?.location?.search);
     let dynParams: Record<string, string> = {};
     for (const key in params) {
@@ -15,11 +18,13 @@ export const useGetData = () => {
         dynParams = { ...dynParams, [key]: params.get(key)! };
       }
     }
-    setFilterState(Object.entries(dynParams).map(([key, value]) => ({ id: key, value })));
-  }, []);
+    const newFilterState = Object.entries(dynParams).map(([key, value]) => ({ id: key, value }));
+    console.log(newFilterState);
+    setFilterState(newFilterState);
+  }, [filterState]);
 
   const { data, error, isLoading, refetch } = useQuery<DataType[]>({
-    queryKey: [filterState],
+    queryKey: filterState,
     queryFn: async () => {
       // const response = await fetch(....)
       await new Promise((resolve, _reject) => {

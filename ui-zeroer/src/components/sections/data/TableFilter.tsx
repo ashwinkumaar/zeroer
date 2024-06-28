@@ -5,7 +5,7 @@ import { FC } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Button } from '@/components/ui/button';
-import { Form, FormControl, FormField, FormItem } from '@/components/ui/form';
+import { Form, FormControl, FormField, FormItem, FormLabel } from '@/components/ui/form';
 import { DataType } from './columns';
 import { TFilterSchema, TFilterSchemaKey, filterDefaultValues, filterSchema } from './schema';
 import { Input } from '@/components/ui/input';
@@ -24,6 +24,8 @@ export const TableFilter: FC<TableFilterProps> = ({ table: _table }) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     form.reset();
+    const params = new URLSearchParams({ view: 'data', ...values });
+    window.location.assign(`/?${params}`);
   }
 
   return (
@@ -34,28 +36,29 @@ export const TableFilter: FC<TableFilterProps> = ({ table: _table }) => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className='flex grow flex-row place-items-center justify-between gap-2 rounded-md border p-3 shadow-sm'
+          className='flex grow flex-row place-items-end justify-between gap-4 rounded-md border p-3 shadow-sm'
         >
           {Object.keys(filterSchema.shape).map((key) => (
-            <div>
-              <FormField
-                control={form.control}
-                key={key}
-                name={key as TFilterSchemaKey}
-                render={({ field }) => (
-                  <FormItem>
-                    <FormControl>
-                      <Input {...field} />
-                    </FormControl>
-                  </FormItem>
-                )}
-              />
-            </div>
+            <FormField
+              control={form.control}
+              key={key}
+              name={key as TFilterSchemaKey}
+              render={({ field }) => (
+                <FormItem>
+                  <FormControl className=''>
+                    <div className='flex flex-col gap-1'>
+                      <FormLabel>{key.replace(/\w/, (c) => c.toUpperCase())}</FormLabel>
+                      <Input placeholder='' {...field} />
+                    </div>
+                  </FormControl>
+                </FormItem>
+              )}
+            />
           ))}
           <Button
             className='flex flex-row gap-2 disabled:cursor-not-allowed'
             type='submit'
-            disabled
+            // disabled
           >
             <MagnifyingGlassIcon />
             <span>Search</span>

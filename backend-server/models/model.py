@@ -3,9 +3,13 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String, TIMESTAMP, ForeignKey
 from sqlalchemy.orm import relationship
 
+from sqlalchemy.ext.declarative import declarative_base    
+MySQLBase = declarative_base()
+
 db = SQLAlchemy(app)
 
 class User(db.Model):
+# class User(MySQLBase):
     __tablename__ = "users"
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_name = Column(String(200))
@@ -29,6 +33,7 @@ class User(db.Model):
         return f"{self.json()}"
 
 class Group(db.Model):
+# class Group(MySQLBase):
     __tablename__ = "user_relationship"
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_relationship = Column(String(500))

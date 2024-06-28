@@ -1,10 +1,29 @@
 from config import app
-from models.model import User, db
+from models.model import User
 from flask import request, jsonify, abort
 from controllers.controller import UserService
 from dto.response import ResponseBodyJSON
 from dto.exception import CustomException
 from sqlalchemy.exc import IntegrityError
+
+
+# from extensions import init_mysql, open_rabbitmq_connection
+
+
+# # Test RabbitMQ Connection
+# with open_rabbitmq_connection() as channel:
+#     method_frame, header_frame, body = channel.basic_get(
+#         queue="analyse-user-queue"
+#     )
+
+
+
+
+# # Test RabbitMQ Connection
+# with open_rabbitmq_connection() as channel:
+#     method_frame, header_frame, body = channel.basic_get(
+#         queue="analyse-user-queue"
+#     )
 
 
 @app.route("/welcome", methods=["GET"])
@@ -54,6 +73,7 @@ def create_user():
         new_user.user_address = addr
         new_user.user_city = city
         new_user.user_phone = phone
+        new_user.process_status = "processing" 
         data = user_service.create(user=new_user).json()
         response = ResponseBodyJSON(True, data).json()
         return jsonify(response), 201
@@ -76,4 +96,4 @@ def get_all_user_relationships():
     return jsonify(response), 200
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=5050, debug=True)

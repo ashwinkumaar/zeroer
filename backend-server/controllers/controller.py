@@ -1,5 +1,5 @@
 from models.model import db, User, Group
-from sqlalchemy import desc, update
+from sqlalchemy import desc, update, or_
 from sqlalchemy.exc import SQLAlchemyError, NoResultFound
 from config import app
 
@@ -10,9 +10,23 @@ class UserService:
         db.session.commit()
         return user
 
-    def retrieve_user_by_name(self, name: str):
+    def retrieve_user_by_records(self, name: str, address: str, city: str, phone: str):
         print("this is name", name)
-        res = db.session.query(User).filter(User.user_name.ilike(f'%{name}%')).first()
+        conditions = []
+        if name:
+            conditions.append(User.user_name.ilike(f'%{name}%'))
+        if address:
+            conditions.append(User.user_address.ilike(f'%{address}%'))
+        if city:
+            conditions.append(User.city.ilike(f'%{city}%'))
+        if phone:
+            conditions.append(User.user_phone.ilike(f'%{phone}%'))
+        if conditions:
+            query = db.session.query(User).filter(or_(*conditions))
+        else:
+            query = db.session.query(User)
+
+        res = query.first()
         print("this is result", res)
         return res
     

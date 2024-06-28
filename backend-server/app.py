@@ -30,22 +30,26 @@ from sqlalchemy.exc import IntegrityError
 def welcome_app():
     return "Welcome to Global Hackathon Entity Recognition"
 
-@app.route("/retrieveUserName", methods=["GET"])
-def get_user_by_name():
+@app.route("/retrieve", methods=["GET"])
+def get_users():
     user_service = UserService()
     name = request.args.get("name")
+    address = request.args.get("address")
+    city = request.args.get("city")
+    phone = request.args.get("phone")
     app.logger.info(f"GET user by {name}")
-    
-    result = user_service.retrieve_user_by_name(name)
+    result = user_service.retrieve_user_by_records(name, address, city, phone)
     if result is None:
         abort(404, description=f"User {name} not found.")
     data = result.json()
+    print("this is data", data)
     manipulated_data = {
         "id": data["id"],
         "name": data["name"],
-        "addr": data["addr"],
+        "address": data["addr"],
         "city": data["city"],
-        "phone": data["phone"]
+        "phone": data["phone"],
+        "process_status": data["process_status"]
     }
     response = ResponseBodyJSON(True, manipulated_data).json()
     return jsonify(response), 200

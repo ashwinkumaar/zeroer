@@ -2,51 +2,38 @@ import { useQuery } from '@tanstack/react-query';
 import { ColumnFiltersState } from '@tanstack/react-table';
 import { useEffect, useState } from 'react';
 
-import { DATA_FIELDS, type DataTypeKey, type DataType } from './columns';
+import { type DataType } from './columns';
 
 export const useGetData = () => {
   const [filterState, setFilterState] = useState<ColumnFiltersState>([]);
 
   useEffect(() => {
-    if (filterState) {
-      return;
-    }
     const params = new URLSearchParams(window?.location?.search);
-    let dynParams: Record<string, string> = {};
-    for (const key in params) {
-      if (DATA_FIELDS.includes(key as DataTypeKey)) {
-        dynParams = { ...dynParams, [key]: params.get(key)! };
+    params.delete('view');
+    const dynParams: Record<string, string> = {};
+    for (const key of ['id', 'name', 'address', 'phone', 'city']) {
+      if (params.get(key)) {
+        dynParams[key] = params.get(key)!;
       }
     }
-    const newFilterState = Object.entries(dynParams).map(([key, value]) => ({ id: key, value }));
-    console.log(newFilterState);
-    setFilterState(newFilterState);
-  }, [filterState]);
+    const nFS = Object.entries(dynParams).map((v) => ({ id: v[0], value: v[1] }));
+    setFilterState(nFS);
+  }, [window?.location]);
 
   const { data, error, isLoading, refetch } = useQuery<DataType[]>({
     queryKey: filterState,
     queryFn: async () => {
-      // const response = await fetch(....)
-      await new Promise((resolve, _reject) => {
-        setTimeout(resolve, 30_000);
-      });
-      return [
-        {
-          id: 'ABCD',
-          name: 'A. Aardvark',
-          address: '1 Fusionopolis Way',
-          city: 'Singapore',
-          phone: '+65 12345678',
-        },
-        {
-          id: 'DBCA',
-          name: 'B. Bardvark',
-          address: '2 Fusionopolis Way',
-          city: 'Singapore',
-          phone: '+65 87654321',
-        },
-      ];
+      const params = new URLSearchParams(
+        Object.fromEntries(filterState.map((v) => [v.id, v.value as string]))
+      );
+      const endpoint = `http://127.0.0.1:5000/retrieve?${params}`;
+      const { data } = await fetch(endpoint).then((res) => res.json());
+      if (Array.isArray(data)) {
+        return data;
+      }
+      return [data];
     },
+    enabled: !!filterState,
   });
   return { data, error, isLoading, refetch, filterFields: filterState };
 };

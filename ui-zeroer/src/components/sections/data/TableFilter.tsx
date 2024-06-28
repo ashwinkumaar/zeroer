@@ -24,7 +24,12 @@ export const TableFilter: FC<TableFilterProps> = ({ table: _table }) => {
     // Do something with the form values.
     // ✅ This will be type-safe and validated.
     form.reset();
-    const params = new URLSearchParams({ view: 'data', ...values });
+    const params = new URLSearchParams({ view: 'data' });
+    for (const key in values) {
+      if (values[key as TFilterSchemaKey]) {
+        params.set(key, values[key as TFilterSchemaKey]);
+      }
+    }
     window.location.assign(`/?${params}`);
   }
 

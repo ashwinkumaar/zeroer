@@ -6,24 +6,20 @@ from dto.response import ResponseBodyJSON
 from dto.exception import CustomException
 from sqlalchemy.exc import IntegrityError
 from collections import defaultdict, deque
-
-# from extensions import init_mysql, open_rabbitmq_connection
-
-
-# # Test RabbitMQ Connection
-# with open_rabbitmq_connection() as channel:
-#     method_frame, header_frame, body = channel.basic_get(
-#         queue="analyse-user-queue"
-#     )
+import json
 
 
+from extensions import init_mysql, open_rabbitmq_connection
 
 
-# # Test RabbitMQ Connection
-# with open_rabbitmq_connection() as channel:
-#     method_frame, header_frame, body = channel.basic_get(
-#         queue="analyse-user-queue"
-#     )
+# Test RabbitMQ Connection
+with open_rabbitmq_connection() as channel:
+    method_frame, header_frame, body = channel.basic_get(
+        queue="analyse-user-queue"
+    )
+
+
+
 
 
 @app.route("/welcome", methods=["GET"])
@@ -64,16 +60,46 @@ def create_user():
         city = body.get("city")
         phone = body.get("phone")
         
-        existing_user = user_service.retrieve_user_by_name(name)
-        if existing_user:
-            abort(400, description=f"User with {name} already exists")
+        
+        # existing_user = user_service.retrieve_user_by_records(name, addr, city, phone)
+        # print(city)
+        # if existing_user:
+            # abort(400, description=f"User with {name} already exists")
         new_user = User()
         new_user.user_name = name
         new_user.user_address = addr
         new_user.user_city = city
         new_user.user_phone = phone
         new_user.process_status = "processing" 
-        data = user_service.create(user=new_user).json()
+        user_data = user_service.create(user=new_user)
+
+        # print(data)
+        # msg = {
+        #     "user"
+        # }
+        
+        data = {"id": user_data.id, "name": user_data.user_name, 
+                "addr": user_data.user_address, 
+                "city": user_data.user_city, 
+                "phone": user_data.user_phone}
+        # print("DATA", data)
+        msg_str = json.dumps(data)
+        # print("msg_str", msg_str)
+        # Push to MQ
+        try:
+            with open_rabbitmq_connection() as channel:
+                channel.basic_publish(
+                    exchange="amq.direct",
+                    routing_key="analyse-user",
+                    # body="abc",
+                    body=msg_str,
+                )
+                print("success rabbitmq")
+        except Exception as e:
+            print(e)
+            abort(400, description=f"RabbitMQ Error: {e}")
+
+
         response = ResponseBodyJSON(True, data).json()
         return jsonify(response), 201
     except IntegrityError as e:

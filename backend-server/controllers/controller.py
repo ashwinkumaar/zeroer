@@ -18,7 +18,7 @@ class UserService:
         if address:
             conditions.append(User.user_address.ilike(f'%{address}%'))
         if city:
-            conditions.append(User.city.ilike(f'%{city}%'))
+            conditions.append(User.user_city.ilike(f'%{city}%'))
         if phone:
             conditions.append(User.user_phone.ilike(f'%{phone}%'))
         if conditions:

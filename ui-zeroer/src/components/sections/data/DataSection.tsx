@@ -11,23 +11,38 @@ import { DataTable } from '@/components/ui/data-table';
 import { dataColumns } from './columns';
 import { useGetData } from './data';
 import { TableFilter } from './TableFilter';
+import { useState } from 'react';
+import { Button } from '@/components/ui/button';
+import { DataGraph } from './DataGraph';
 
 export function DataSection() {
   const { data, isLoading, filterFields } = useGetData();
+  const [isTable, setIsTable] = useState(true);
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Data</CardTitle>
-        <CardDescription>View the existing entities in the dataset.</CardDescription>
+      <CardHeader className='flex flex-row'>
+        <div className='flex grow flex-col'>
+          <CardTitle>Data</CardTitle>
+          <CardDescription>
+            View the closest matching users from the existing databases
+          </CardDescription>
+        </div>
+        <Button onClick={() => setIsTable(!isTable)}>
+          {isTable ? 'Show Graph' : 'Show Table'}
+        </Button>
       </CardHeader>
       <CardContent className='space-y-2'>
-        <DataTable
-          columns={dataColumns}
-          data={data ?? []}
-          isLoading={isLoading}
-          filterState={filterFields}
-          customFilterComponent={TableFilter}
-        />
+        {isTable ? (
+          <DataTable
+            columns={dataColumns}
+            data={data ?? []}
+            isLoading={isLoading}
+            filterState={filterFields}
+            customFilterComponent={TableFilter}
+          />
+        ) : (
+          <DataGraph />
+        )}
       </CardContent>
       <CardFooter />
     </Card>

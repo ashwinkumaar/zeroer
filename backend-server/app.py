@@ -5,7 +5,7 @@ from controllers.controller import UserService
 from dto.response import ResponseBodyJSON
 from dto.exception import CustomException
 from sqlalchemy.exc import IntegrityError
-
+from collections import defaultdict, deque
 
 @app.route("/welcome", methods=["GET"])
 def welcome_app():
@@ -23,7 +23,6 @@ def get_users():
     if result is None:
         abort(404, description=f"User {name} not found.")
     data = result.json()
-    print("this is data", data)
     manipulated_data = {
         "id": data["id"],
         "name": data["name"],
@@ -66,12 +65,50 @@ def create_user():
 def get_all_user_relationships():
     app.logger.info("GET all permissions")
     user_service = UserService()
+    id = request.args.get("id")
     data = user_service.retrieve_user_relationships()
-    return_list = []
+    
+    return_list = []  # [{ id: id, relationships: [...]}]
     for id, relationship_strings in data:
         relationships = relationship_strings.split(', ')
         return_list.append({"id": id, "relationships": relationships})
-    response = ResponseBodyJSON(True, return_list).json()
+        
+    adjacency_list = {}  # id: 1 | relationships: []
+    for item in return_list:
+        for entry in item.items():
+            key, value = entry  # id, 1 | relationships: []
+            print(entry)
+            adjacency_list[key] = value
+        
+            
+        queue = deque([id])  # [id, id, id]
+        visited = set()  # { id, id , id}
+        traversal_order=[]
+        
+        while queue:
+            curr = queue.popleft()
+            if curr in visited:
+                continue
+            visited.add(curr)  # Mark current ID as visited
+            traversal_order.append(curr)  
+            
+            neighbor_list = adjacency_list['relationships']
+            for neighbor in neighbor_list:
+                if neighbor not in visited:
+                    queue.append(neighbor)
+                
+                
+    nodes = [{'id': node} for node in traversal_order]
+
+    print("this is nodes,", nodes)
+    edges = [{'from': node, 'to': neighbor} for node in traversal_order for neighbor in adjacency_list["relationships"] if neighbor in traversal_order]
+
+
+    graph = {
+        'nodes' : nodes,
+        'edges' : edges
+    }
+    response = ResponseBodyJSON(True, graph).json()
     print("this is response", response)
     return jsonify(response), 200
 

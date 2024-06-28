@@ -26,9 +26,10 @@ class UserService:
         else:
             query = db.session.query(User)
 
-        res = query.first()
-        print("this is result", res)
-        return res
+        res = query.all()
+        final_result = res[0]
+        print("this is result", final_result)
+        return final_result
     
     def update_existing_user_details(self, user: User):
         stmt = (

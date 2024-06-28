@@ -194,6 +194,7 @@ def main():
 
                     relationships = run_model(data)
                     ###########################
+                    print("relationship",relationships)
                     # relationship_str = json.dumps(relationships, default=int)
                     relationship_str = ", ".join(str(x) for x in relationships)
                     
@@ -210,10 +211,17 @@ def main():
                     # Update status
                     user.process_status = "processed"
                     
+                    
+                    new_relationship = model.Group(id=user.id, user_relationship=relationship_str)
+                    print(relationship_str)
+                    
+                    mysql.add(new_relationship)
                     mysql.commit()
                     
-                    new_relationship = model.Group(user_id=user.id, user_relationship=relationship_str)
-                    mysql.commit()
+                    print("here")
+                    
+                    
+                    # mysql.commit()
                     # Add reslationship
                     # for next_id in relationships:
                     #     new_relationship = model.Group(user_id=user.id, user_relationship=)

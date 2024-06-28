@@ -8,16 +8,22 @@ from datetime import datetime
 import json
 import logging
 
-# import models
+
 
 import pika
 # import asyncio
 
 # Load the db and rabbitmq connectors
-# from extensions import init_postgres, open_rabbitmq_connection
-from extensions import init_mysql, open_rabbitmq_connection
+# from extensions import init_mysql, open_rabbitmq_connection
 
 
+# sys.path.append("../")
+import single_entry_run
+
+
+sys.path.append("../")
+from consumer.extensions import init_mysql, open_rabbitmq_connection
+import consumer.model
 
 # # Load the db modesl
 # import models
@@ -28,6 +34,15 @@ with open_rabbitmq_connection() as channel:
     method_frame, header_frame, body = channel.basic_get(
         queue="analyse-user-queue"
     )
+
+# Test MySQL
+with init_mysql() as mysql:
+    user = (
+        mysql.query(model.User)
+        .filter(model.User.user_name == "brunos")
+        .first()
+    )   
+    print(user)
 
 
 formatter = logging.Formatter("%(asctime)s - [%(levelname)s] - %(message)s")
@@ -85,12 +100,20 @@ def main():
                     data = json.loads(body)
 
                     user_id = data["user_id"]
-
+                    
                     # user = (
-                    #     postgres.query(models.Users)
-                    #     .filter(models.Users.video_id == user_id)
+                    #     mysql.query(model.User)
+                    #     .filter(model.User.user_name == "brunos")
                     #     .first()
                     # )   
+                    # print(user)
+
+                    user = (
+                        mysql.query(model.User)
+                        .filter(model.User.id == user_id)
+                        .first()
+                    )   
+                    print(user)
 
                     ###### Run model ###########
 
@@ -104,7 +127,7 @@ def main():
                     # user.process_status = "completed"
 
                     # Save it in database
-                    # postgres.commit()
+                    # mysql.commit()
                     # mysql.commit()
 
             

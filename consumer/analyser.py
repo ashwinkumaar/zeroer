@@ -17,6 +17,8 @@ import pika
 # from extensions import init_postgres, open_rabbitmq_connection
 from extensions import init_mysql, open_rabbitmq_connection
 
+
+
 # # Load the db modesl
 # import models
 
@@ -104,7 +106,7 @@ def main():
                     # Save it in database
                     # postgres.commit()
                     # mysql.commit()
-                    
+
             
                 print("Done", user_id, data, relationship_str)
                 

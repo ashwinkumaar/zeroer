@@ -1,0 +1,106 @@
+version: '1'
+name: zeroer
+services:
+  # db:
+  #   container_name: zeroer_db
+  #   image: postgres:15.2
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: password
+  #     POSTGRES_DB: zeroer
+  #   volumes:
+  #     - postgres_data:/var/lib/postgresql/data
+  #     - './postgres/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql'
+  #     - './postgres/insert_values.sql:/docker-entrypoint-initdb.d/insert_values.sql'
+  #   expose:
+  #     - 5455
+  #   ports:
+  #     - 5455:5455
+  #   command: -p 5455
+  #   networks:
+  #     - zeroer_docker
+
+
+# db:
+#    image: mysql:latest
+#    container_name: pinkFlamingosContainer
+#    ports:
+#      - "3306:3306"
+#    environment:
+#      - MYSQL_ROOT_PASSWORD=superSecretPassword
+#      - MYSQL_DATABASE=pinkFlamingosDatabase
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: zeroer
+      MYSQL_ROOT_USER: user
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_USER: zeroer
+      MYSQL_PASSWORD: secret
+    ports:
+      - "3306:3306"
+    volumes:
+      - './mysql/create_tables.sql:/docker-entrypoint-initdb.d/1.sql'
+      - './mysql/insert_users.sql:/docker-entrypoint-initdb.d/2.sql'
+      - './mysql/insert_user_relationship.sql:/docker-entrypoint-initdb.d/3.sql'
+      # - ./mysql:/docker-entrypoint-initdb.d
+    networks:
+      - zeroer_docker
+
+  # backend:
+  #   depends_on:
+  #     - db
+  #     - rabbitmq
+  #   container_name: ml_backend
+  #   build:
+  #     context: ./backend
+  #     dockerfile: ./Dockerfile
+  #   extra_hosts:
+  #     - "host.docker.internal:host-gateway"
+  #   image: ml_backend:latest
+  #   volumes:
+  #     - mlops_files:/services/mlops_files
+  #   #   - './:/var/www/html'
+  #   ports:
+  #     - 5050:5050
+  #     # - 80:80
+  #     # - 443:443
+  #   networks:
+  #     - zeroer_docker
+  
+  # frontend:
+  #   container_name: ml_frontend
+  #   build:
+  #     context: ./frontend
+  #     dockerfile: ./Dockerfile
+  #   image: ml_frontend:latest
+  #   ports:
+  #     - 8080:80
+  #   networks:
+  #     - zeroer_docker
+  
+  rabbitmq:
+    container_name: zeroer_rabbitmq
+    image: rabbitmq:3.11.10-management
+    environment:
+      RABBITMQ_USER: user
+      RABBITMQ_PASSWORD: password
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - ./rabbitmq/rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf
+      - ./rabbitmq/definitions.json:/etc/rabbitmq/definitions.json
+      # - "rabbitmq_data:/data"
+    networks:
+      - zeroer_docker
+
+networks:
+  zeroer_docker:
+    name: zeroer_docker
+
+volumes:
+  postgres_data:
+  rabbitmq_data:
+  
+  

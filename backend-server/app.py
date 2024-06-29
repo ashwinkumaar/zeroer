@@ -7,10 +7,12 @@ from dto.exception import CustomException
 from sqlalchemy.exc import IntegrityError
 from collections import defaultdict, deque
 import json
+from extensions import open_rabbitmq_connection
 
-
-from extensions import init_mysql, open_rabbitmq_connection
-
+with open_rabbitmq_connection() as channel:
+    method_frame, header_frame, body = channel.basic_get(
+        queue='analyse-user-queue'
+    )
 
 @app.route("/welcome", methods=["GET"])
 def welcome_app():
@@ -54,15 +56,15 @@ def create_user():
         new_user.user_address = addr
         new_user.user_city = city
         new_user.user_phone = phone
-        new_user.process_status = "processing" 
+        new_user.process_status = "processing"
         user_data = user_service.create(user=new_user)
-
         
         data = {"id": user_data.id, "name": user_data.user_name, 
                 "addr": user_data.user_address, 
                 "city": user_data.user_city, 
                 "phone": user_data.user_phone}
         msg_str = json.dumps(data)
+        
         try:
             with open_rabbitmq_connection() as channel:
                 channel.basic_publish(

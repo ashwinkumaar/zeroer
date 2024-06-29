@@ -12,16 +12,6 @@ import json
 from extensions import init_mysql, open_rabbitmq_connection
 
 
-# Test RabbitMQ Connection
-with open_rabbitmq_connection() as channel:
-    method_frame, header_frame, body = channel.basic_get(
-        queue="analyse-user-queue"
-    )
-
-
-
-
-
 @app.route("/welcome", methods=["GET"])
 def welcome_app():
     return "Welcome to Global Hackathon Entity Recognition"
@@ -59,12 +49,6 @@ def create_user():
         addr = body.get("addr")
         city = body.get("city")
         phone = body.get("phone")
-        
-        
-        # existing_user = user_service.retrieve_user_by_records(name, addr, city, phone)
-        # print(city)
-        # if existing_user:
-            # abort(400, description=f"User with {name} already exists")
         new_user = User()
         new_user.user_name = name
         new_user.user_address = addr
@@ -73,19 +57,12 @@ def create_user():
         new_user.process_status = "processing" 
         user_data = user_service.create(user=new_user)
 
-        # print(data)
-        # msg = {
-        #     "user"
-        # }
         
         data = {"id": user_data.id, "name": user_data.user_name, 
                 "addr": user_data.user_address, 
                 "city": user_data.user_city, 
                 "phone": user_data.user_phone}
-        # print("DATA", data)
         msg_str = json.dumps(data)
-        # print("msg_str", msg_str)
-        # Push to MQ
         try:
             with open_rabbitmq_connection() as channel:
                 channel.basic_publish(
